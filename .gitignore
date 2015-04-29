@@ -1,0 +1,11 @@
+# node.js
+node_modules/
+
+# OS X
+.DS_Store
+
+# VIM
+*.swp
+
+# Visual Studio Code
+.settings/
