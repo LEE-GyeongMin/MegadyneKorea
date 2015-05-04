@@ -4,18 +4,53 @@
 
 // GLOBAL VARIABLES
 //===================================================
+var directories = {
+	stylesheets: 'public/stylesheets',
+	jades: 'views/jades',
+	stylus: 'views/styluses'
+};
+
+var getDirectory = function getDirectory(dir) {
+	var result;
+
+	if (directories.hasOwnProperty(dir)) {
+		result = path.join(__dirname, directories[dir]);
+	} else {
+		result = path.join(__dirname, dir ? String(dir) : '');
+	}
+
+	return fs.existsSync(result) ? result : false;
+};
+
 var getController = function getController(ctrl) {
-	return path.join(__dirname, 'controllers', ctrl);
+	var dir = path.join(getDirectory('controllers'), ctrl);
+	var isExists = fs.existsSync(dir) || fs.existsSync(dir + '.js');
+
+	return isExists ? dir : false;
+};
+
+var compileStylus = function compileStylus(str, path) {
+	return stylus(str)
+			.set('filename', path)
+			.set('compress', true)
+			.use(nib()).import('nib');
 };
 
 // DEPENDENCIES
 //===================================================
+var fs = require('fs');
+
+// express.js
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+
+// Stylus & Nib
+var stylus = require('stylus');
+var nib = require('nib');
 
 // CONTROLLERS
 var index = require(getController('index'));
@@ -24,9 +59,10 @@ var index = require(getController('index'));
 //===================================================
 var app = express();
 
+
 //app.enable('case sensitive routing');
-app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+app.set('views', getDirectory('jades'));
 
 // MIDDLEWARES
 //===================================================
@@ -35,7 +71,14 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(stylus.middleware({
+	src: path.join(getDirectory('stylus')),
+	dest: path.join(getDirectory('stylesheets')),
+	compile: compileStylus
+}));
+
+app.use(express.static(getDirectory('public')));
 
 // URL - CONTROLLER MAPPING
 app.use('/', index);

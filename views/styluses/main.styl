@@ -1,0 +1,31 @@
+global-reset()
+
+px_footerHeight = 100px
+
+*
+	box-sizing: border-box
+
+html,
+body
+	position: relative
+	height: 100%
+
+body
+	> .container
+		position: relative
+		width: 960px
+		min-height: 100%
+		margin: 0 auto
+
+		> header,
+		> article,
+		> footer
+			border: 1px solid red
+
+		> article
+			padding-bottom: px_footerHeight
+		> footer
+			position: absolute
+			width: 100%
+			height: px_footerHeight
+			bottom: 0px
