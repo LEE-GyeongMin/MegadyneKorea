@@ -1,3 +1,4 @@
+numOfBanners = 5
 bannerHeight = 300
 buttonWidth = 21
 buttonHeight = 53
@@ -12,30 +13,33 @@ body > article > .bannerContainer
 		height: (bannerHeight) px
 		overflow: hidden
 
-	.positioner > .banner
+	.banner
 		position: absolute
-		left: -200%
-		width: 500%
+		left: (-100 * floor(numOfBanners / 2)) %
+		width: (100 * numOfBanners) %
 		height: 100%
 
 		.content
 			display: block
 			position: absolute
-			width: 20%
+			width: (100 / numOfBanners) %
 			height: 100%
 			> img
 				width: 100%
 				height: 100%
-		.content:nth-of-type(1)
-			left: 40%
-		.content:nth-of-type(2)
-			left: 60%
-		.content:nth-of-type(3)
-			left: 80%
-		.content:nth-last-of-type(2)
-			left: -20%
-		.content:last-of-type
-			left: 0%
+		for idx in range(1, numOfBanners)
+			.content:nth-of-type({idx})
+				left: ((100 / numOfBanners) * idx) %
+	.banner.moveLeft,
+	.banner.moveRight
+		animation-duration: 0.4s
+		animation-timing-function: ease-in-out
+		animation-fill-mode: forwards
+	.banner.moveLeft
+		animation-name: moveLeft
+	.banner.moveRight
+		animation-name: moveRight
+
 	.bannerCtrl
 		position: absolute
 		width: 1060px
@@ -53,3 +57,13 @@ body > article > .bannerContainer
 		.toRight
 			right: 0px
 			background: url("/images/arrow-right.png") no-repeat
+
+@keyframes moveLeft {
+	from { transform: translateX(0); }
+	to { transform: translateX((100 / numOfBanners) %); }
+}
+
+@keyframes moveRight {
+	from { transform: translateX(0); }
+	to { transform: translateX(-(100 / numOfBanners) %); }
+}
