@@ -1,0 +1,13 @@
+header
+	nav
+		a.logo(href="/")
+			img(src="/images/logo.png")
+		ul
+			- var menus = { about: {url: "/about", title: "ABOUT US"}, products: {url: "/products", title: "PRODUCTS"}, catalogs: {url: "/catalogs", title: "CATALOGS"} }
+
+			each menu in menus
+				li
+					if menu.url === baseUrl
+						a.menu.on(href=menu.url)= menu.title
+					else
+						a.menu(href=menu.url)= menu.title

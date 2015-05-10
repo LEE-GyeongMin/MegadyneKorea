@@ -1,0 +1,55 @@
+bannerHeight = 300
+buttonWidth = 21
+buttonHeight = 53
+
+body > article > .bannerContainer
+	position: relative
+
+	.positioner
+		display: block
+		position: relative
+		width: 100%
+		height: (bannerHeight) px
+		overflow: hidden
+
+	.positioner > .banner
+		position: absolute
+		left: -200%
+		width: 500%
+		height: 100%
+
+		.content
+			display: block
+			position: absolute
+			width: 20%
+			height: 100%
+			> img
+				width: 100%
+				height: 100%
+		.content:nth-of-type(1)
+			left: 40%
+		.content:nth-of-type(2)
+			left: 60%
+		.content:nth-of-type(3)
+			left: 80%
+		.content:nth-last-of-type(2)
+			left: -20%
+		.content:last-of-type
+			left: 0%
+	.bannerCtrl
+		position: absolute
+		width: 1060px
+		left: -30px
+		top: (bannerHeight / 2) px
+		margin-top: -26.5px
+
+		a
+			display: block
+			position: absolute
+			width: (buttonWidth) px
+			height: (buttonHeight) px
+		.toLeft
+			background: url("/images/arrow-left.png") no-repeat
+		.toRight
+			right: 0px
+			background: url("/images/arrow-right.png") no-repeat

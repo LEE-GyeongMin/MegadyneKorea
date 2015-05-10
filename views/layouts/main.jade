@@ -1,0 +1,23 @@
+mixin stylesheet(url)
+	link(type="text/css", rel="stylesheet", href=url)
+
+mixin script(url)
+	script(src=url)
+
+doctype html
+html
+	head
+		base(href="/")
+		meta(charset="UTF-8")
+		block title
+			title Megadyne Korea
+		+stylesheet("http://fonts.googleapis.com/css?family=Noto+Sans:400,700?subset=latin,korean")
+		+stylesheet("/stylesheets/main.css")
+		block links
+	body
+		include ../includes/header.jade
+		article
+			block body
+		include ../includes/footer.jade
+
+		block scripts

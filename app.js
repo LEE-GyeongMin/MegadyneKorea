@@ -6,7 +6,7 @@
 //===================================================
 var directories = {
 	stylesheets: 'public/stylesheets',
-	jades: 'views/jades',
+	jades: 'views',
 	stylus: 'views/styluses'
 };
 
@@ -54,6 +54,7 @@ var nib = require('nib');
 
 // CONTROLLERS
 var index = require(getController('index'));
+var products = require(getController('products'));
 
 // SETUPS
 //===================================================
@@ -63,6 +64,7 @@ var app = express();
 //app.enable('case sensitive routing');
 app.set('view engine', 'jade');
 app.set('views', getDirectory('jades'));
+app.locals.pretty = true;
 
 // MIDDLEWARES
 //===================================================
@@ -82,6 +84,7 @@ app.use(express.static(getDirectory('public')));
 
 // URL - CONTROLLER MAPPING
 app.use('/', index);
+app.use('/products', products);
 
 // REQUESTS WITH NO HANDLER
 app.use(function(req, res, next) {
@@ -95,8 +98,7 @@ app.use(function(err, req, res, next) {
 	res.status(err.status || 500);
 	// TODO CHANGE ERROR PAGE DESIGN
 	res.render('error', {
-		message: err.message,
-		error: {}
+		message: err.message
 	});
 });
 

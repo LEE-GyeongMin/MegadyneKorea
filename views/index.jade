@@ -1,0 +1,24 @@
+extends ./layouts/main.jade
+
+block links
+	+stylesheet("/stylesheets/index.css")
+
+block body
+	div.bannerContainer
+		section.positioner
+			div.banner
+				a.content(href="/products/polyurethane")
+					img(src="/images/products/polyurethane/header.jpg")
+				a.content(href="/products/rubber")
+					img(src="/images/products/rubber/header.png")
+				a.content(href="/products/other")
+					img(src="/images/products/other/header.jpg")
+				a.content(href="/products/special")
+					img(src="/images/products/special/header.jpg")
+		nav.bannerCtrl
+			a.toLeft(href="#")
+			a.toRight(href="#")
+
+block scripts
+	+script("/javascripts/index.js")
+
