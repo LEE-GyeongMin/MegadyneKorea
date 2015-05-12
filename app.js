@@ -69,7 +69,7 @@ app.locals.pretty = true;
 
 // MIDDLEWARES
 //===================================================
-app.use(favicon(getDirectory('public/images/favicon.ico')));
+app.use(favicon(getDirectory('public/favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

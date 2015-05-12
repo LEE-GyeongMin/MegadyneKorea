@@ -16,14 +16,14 @@ body > .main
 //=================================================
 	.banner
 		width: 100%
-		padding: 0 0 10px 0
+		padding: 0 0 15px 0
 		img
 			width: 100%
 
 // Article
 //=================================================
 	.article
-		padding: 10px 100px
+		padding: 15px 100px
 		.title
 			font-size: 2em
 			text-align: center
@@ -32,7 +32,7 @@ body > .main
 		.text
 			color: #333
 			font-size: 1em
-			line-height: 1.7em
+			line-height: 2em
 			text-align: justify
 
 // Thumbnail Box
@@ -40,8 +40,7 @@ body > .main
 	.thumbnail-box
 		position: relative
 		width: 100%
-		padding: 10px 0
-		box-sizing: border-box
+		padding: 15px 0
 
 		.label,
 		.thumbnail
@@ -49,17 +48,14 @@ body > .main
 			padding: 10px
 
 		.label
-			position: relative
 			height: 40px;
-			font-size: 1.5em
+			font-size: 1.3em
 			color: #e50005
-			*
-				display: block
-				height: 100%
-				float: left
-				line-height: 40px
 			img
 				padding-right: 7px
+				vertical-align: middle
+				height: 100%
+
 		.thumbnail
 			a
 				display: block
@@ -67,11 +63,41 @@ body > .main
 			img
 				width: 100%
 
+// Thumbnail Bar
+//=================================================
+	.thumbnail-bar
+		display: block
+		position: relative
+		margin: 15px 50px
+		padding: 15px 50px
+		text-decoration: none
+		border: 1px solid #ddd
+
+		.label
+			height: 40px
+			padding: 0 0 15px 0
+			font-size: 1.3em
+			color: #e50005
+			img
+				padding-right: 7px
+				vertical-align: middle
+				height: 100%
+		.text
+			width: 470px
+			color: #333
+			font-size: 1em
+			line-height: 1.8em
+			text-align: justify
+
+		.thumbnail
+			padding: 10px 0 10px 30px
+
+
 // Slider
 //=================================================
 	.sliderContainer
 		position: relative
-		padding: 0 0 10px 0
+		padding: 0 0 20px 0
 
 		.positioner
 			display: block
