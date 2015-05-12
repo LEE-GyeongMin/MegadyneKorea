@@ -1,20 +1,22 @@
 (function() {
 	"use strict";
 
-	var banner = document.querySelector(".banner");
-	var toLeft = document.querySelector(".bannerCtrl .toLeft");
-	var toRight = document.querySelector(".bannerCtrl .toRight");
+	var banner = document.querySelector(".slider");
+	var toLeft = document.querySelector(".sliderCtrl .toLeft");
+	var toRight = document.querySelector(".sliderCtrl .toRight");
 
-	var animaName = "";
+	var animaName = undefined;
 
-	toLeft.addEventListener("click", function() {
+	toLeft.addEventListener("click", function(event) {
+		event.preventDefault();
 		animaName = "moveLeft";
-		appendClassName(banner, animaName);
+		util.element.appendClassName(banner, animaName);
 	});
 
-	toRight.addEventListener("click", function() {
+	toRight.addEventListener("click", function(event) {
+		event.preventDefault();
 		animaName = "moveRight";
-		appendClassName(banner, animaName);
+		util.element.appendClassName(banner, animaName);
 	});
 
 	addAnimationEventListener(banner, "AnimationEnd", function() {
@@ -28,7 +30,8 @@
 			banner.removeChild(banner.firstChild);
 		}
 
-		removeClassName(banner, animaName);
+		util.element.removeClassName(banner, animaName);
+		animaName = "";
 	});
 
 	function addAnimationEventListener(element, type, callback) {
@@ -39,59 +42,5 @@
 			element.addEventListener(pfx[p] + type, callback, false);
 		}
 	}
-
-	function isString(str) {
-		if (typeof str === "undefined" || str === null) {
-			return false;
-		}
-		return true;
-	}
-
-	function hasClassName(element, sClassName) {
-		if (!isString(sClassName)) {
-			return false;
-		}
-		if (element.className === "") {
-			return false;
-		}
-		
-		var regExp = new RegExp("\\b" + sClassName + "\\b");
-		if (element.className.toString().search(regExp) === -1) {
-			return false;
-		}
-
-		return true;
-	}
-
-	function appendClassName(element, sClassName) {
-		if (!isString(sClassName)) {
-			return ;
-		}
-		if (hasClassName(element, sClassName)) {
-			return ;
-		}
-
-		if (element.className === "") {
-			element.className = sClassName;
-		}
-
-		element.className += " " + sClassName;
-	}
-
-	function removeClassName(element, sClassName) {
-		if (!isString(sClassName)) {
-			return ;
-		}
-		if (element.className === "") {
-			return ;
-		}
-
-		if (element.className.length === sClassName.length) {
-			element.className = "";
-			return ;
-		}
-
-		element.className = element.className.replace(" " + sClassName, "").toString();
-	}
-
 })();
+

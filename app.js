@@ -54,6 +54,7 @@ var nib = require('nib');
 
 // CONTROLLERS
 var index = require(getController('index'));
+var about = require(getController('about'));
 var products = require(getController('products'));
 
 // SETUPS
@@ -68,7 +69,7 @@ app.locals.pretty = true;
 
 // MIDDLEWARES
 //===================================================
-//app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(favicon(getDirectory('public/images/favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -84,22 +85,21 @@ app.use(express.static(getDirectory('public')));
 
 // URL - CONTROLLER MAPPING
 app.use('/', index);
+app.use('/about', about);
 app.use('/products', products);
 
 // REQUESTS WITH NO HANDLER
 app.use(function(req, res, next) {
-	var err = new Error('Not Found');
+	var err = new Error('URL Handler is Not Found');
 	err.status = 404;
 	next(err);
 });
 
 // ERROR HANDLER
 app.use(function(err, req, res, next) {
+	console.log(err.message);
 	res.status(err.status || 500);
-	// TODO CHANGE ERROR PAGE DESIGN
-	res.render('error', {
-		message: err.message
-	});
+	res.render('error');
 });
 
 // EXPORTS

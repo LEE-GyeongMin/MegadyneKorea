@@ -9,16 +9,17 @@ html
 	head
 		base(href="/")
 		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
 		block title
 			title Megadyne Korea
-		+stylesheet("http://fonts.googleapis.com/css?family=Noto+Sans:400,700?subset=latin,korean")
-		+stylesheet("/stylesheets/main.css")
+		+stylesheet("http://fonts.googleapis.com/css?family=Noto+Sans:400?subset=latin,korean")
+		+stylesheet("/stylesheets/layout.css")
 		block links
 	body
 		include ../includes/header.jade
-		article
+		div.main
 			block body
 		include ../includes/footer.jade
 
-		+script("/javascripts/MyHTMLElement.js")
 		block scripts
+

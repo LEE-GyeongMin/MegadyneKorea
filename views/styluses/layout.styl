@@ -1,0 +1,103 @@
+// Variables
+//=================================================
+bodyWidth = 1000
+headerHeight = 70
+footerHeight = 80
+menuHeight = 30
+
+headerBorderColor = #e40002
+headerMenuColor = #da0000
+
+global-reset()
+
+html
+	position: relative
+	height: 100%
+	min-height: 600px
+	font-family: "Noto Sans", sans-serif
+	letter-spacing: -.7px
+
+body
+	position: relative
+	min-width: (bodyWidth)px
+	min-height: 100%
+
+// Header
+//=================================================
+body > .header
+	height: (headerHeight) px
+	border-bottom: 4px solid (headerBorderColor)
+
+	> .nav
+		position: relative
+		width: (bodyWidth) px
+		height: 100%
+		margin: 0 auto
+
+		.logo
+			float: left
+			height: 100%
+			> img
+				width: auto
+				height: 100%
+				padding: 0 15px
+		> ul
+			position: absolute
+			height: (menuHeight) px
+			top: 50%
+			margin-top: -(menuHeight / 2) px
+			right: 0
+			text-align: justify
+
+		> ul > li
+			position: relative
+			display: inline-block
+			height: 100%
+			padding: 0 10px
+
+			*
+				padding: 0 10px
+
+			.menu:before
+				content: ""
+				display: inline-block
+				height: 100%
+				vertical-align: middle
+			.menu
+				display: inline-block
+				height: 100%
+				color: #333
+				font-size: 1em
+				text-decoration: none
+				transition: color .2s ease-in-out
+			.menu:hover
+				color: (headerMenuColor)
+			.menu.on
+				color: (headerMenuColor)
+				border-bottom: 2px solid (headerMenuColor)
+
+		> ul:after
+			content: ""
+			display: inline-block
+			width: 100%
+			font-size: 0
+
+// Main
+//=================================================
+body > .main
+	position: relative
+	width: (bodyWidth) px
+	margin: 0 auto
+	padding-bottom: (footerHeight + 40) px
+
+// Footer
+//=================================================
+body > .footer
+	position: absolute
+	width: (bodyWidth) px
+	height: (footerHeight) px
+	left: 50%
+	bottom: 0px
+	margin-left: -(bodyWidth / 2) px
+	border-top: 1px solid #bbb
+

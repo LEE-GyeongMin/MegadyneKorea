@@ -1,95 +1,144 @@
-bodyWidth = 1000
-headerHeight = 70
-footerHeight = 100
-menuHeight = 30
+// Variables
+//=================================================
+numOfSlides = 4
+sliderHeight = 300
+sliderButtonWidth = 21
+sliderButtonHeight = 53
 
-headerBorderColor = #e40002
-headerMenuColor = #da0000
-
-global-reset()
-
-html
-	position: relative
-	height: 100%
-	min-height: 600px
-	font-family: "Noto Sans", sans-serif
-
-body
-	position: relative
-	min-width: (bodyWidth)px
-	min-height: 100%
-
-body > header
-	height: (headerHeight) px
-	border-bottom: 4px solid (headerBorderColor)
-
-	> nav
+body > .main
+	.container
 		position: relative
-		width: (bodyWidth) px
-		height: 100%
-		margin: 0 auto
 
-		.logo
-			float: left
-			height: 100%
-			> img
-				width: auto
-				height: 100%
-				padding: 0 15px
-		> ul
-			position: absolute
-			height: (menuHeight) px
-			top: 50%
-			margin-top: -(menuHeight / 2) px
-			right: 0
+	.box-shadow
+		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+
+// Banner
+//=================================================
+	.banner
+		width: 100%
+		padding: 0 0 10px 0
+		img
+			width: 100%
+
+// Article
+//=================================================
+	.article
+		padding: 10px 100px
+		.title
+			font-size: 2em
+			text-align: center
+			color: #e50005
+			line-height: 2em
+		.text
+			color: #333
+			font-size: 1em
+			line-height: 1.7em
 			text-align: justify
 
-		> ul > li
+// Thumbnail Box
+//=================================================
+	.thumbnail-box
+		position: relative
+		width: 100%
+		padding: 10px 0
+		box-sizing: border-box
+
+		.label,
+		.thumbnail
+			width: (100 / 3) %
+			padding: 10px
+
+		.label
 			position: relative
-			display: inline-block
-			height: 100%
-			padding: 0 10px
-
+			height: 40px;
+			font-size: 1.5em
+			color: #e50005
 			*
-				padding: 0 10px
-
-			.menu:before
-				content: ""
-				display: inline-block
+				display: block
 				height: 100%
-				vertical-align: middle
-			.menu
-				display: inline-block
-				height: 100%
-				color: #333
-				font-size: 1em
-				font-weight: 800
-				text-decoration: none
-				transition: color .2s ease-in-out
-			.menu:hover
-				color: (headerMenuColor)
-			.menu.on
-				color: (headerMenuColor)
-				border-bottom: 2px solid (headerMenuColor)
+				float: left
+				line-height: 40px
+			img
+				padding-right: 7px
+		.thumbnail
+			a
+				display: block
+				box-sizing: border-box
+			img
+				width: 100%
 
-		> ul:after
-			content: ""
-			display: inline-block
+// Slider
+//=================================================
+	.sliderContainer
+		position: relative
+		padding: 0 0 10px 0
+
+		.positioner
+			display: block
+			position: relative
 			width: 100%
-			font-size: 0
+			height: (sliderHeight) px
+			overflow: hidden
 
-body > article
-	position: relative
-	width: (bodyWidth) px
-	margin: 0 auto
-	padding-bottom: (footerHeight) px
+		.slider
+			position: absolute
+			left: (-100 * floor(numOfSlides / 2)) %
+			width: (100 * numOfSlides) %
+			height: 100%
 
-body > footer
-	position: absolute
-	width: (bodyWidth) px
-	height: (footerHeight) px
-	left: 50%
-	bottom: 0px
-	margin-left: -(bodyWidth / 2) px
-	border-top: 1px solid #bbb
+			.content
+				display: block
+				position: absolute
+				width: (100 / numOfSlides) %
+				height: 100%
+				> img
+					width: 100%
+					height: 100%
+			for idx in range(1, numOfSlides)
+				.content:nth-of-type({idx})
+					left: ((100 / numOfSlides) * (idx - 1)) %
+
+		.slider.ie8
+			left: 0
+
+		.slider.moveLeft,
+		.slider.moveRight
+			animation-duration: 0.4s
+			animation-timing-function: ease-in-out
+			animation-fill-mode: forwards
+		.slider.moveLeft
+			animation-name: moveLeft
+		.slider.moveRight
+			animation-name: moveRight
+
+		.sliderCtrl
+			position: absolute
+			width: 1060px
+			left: -30px
+			top: (sliderHeight / 2) px
+			margin-top: -(sliderButtonHeight / 2) px
+
+			a
+				display: block
+				position: absolute
+				width: (sliderButtonWidth) px
+				height: (sliderButtonHeight) px
+			.toLeft
+				background: url("/images/arrow-left.png") no-repeat
+			.toRight
+				right: 0px
+				background: url("/images/arrow-right.png") no-repeat
+
+
+// Slider Animation
+//=================================================
+@keyframes moveLeft {
+	from { transform: translateX(0); }
+	to { transform: translateX((100 / numOfSlides) %); }
+}
+
+@keyframes moveRight {
+	from { transform: translateX(0); }
+	to { transform: translateX(-(100 / numOfSlides) %); }
+}
 

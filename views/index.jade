@@ -1,25 +1,32 @@
 extends ./layouts/main.jade
 
 block links
-	+stylesheet("/stylesheets/index.css")
+	+stylesheet("/stylesheets/main.css")
 
 block body
-	div.bannerContainer
-		section.positioner
-			div.banner
-				a.content(href="/products/special")
-					img(src="/images/products/special/header.jpg")
-				a.content(href="/products/polyurethane")
-					img(src="/images/products/polyurethane/header.jpg")
-				a.content(href="/products/rubber")
-					img(src="/images/products/rubber/header.png")
-				a.content(href="/products/other")
-					img(src="/images/products/other/header.jpg")
-
-		nav.bannerCtrl
-			a.toLeft(href="#")
-			a.toRight(href="#")
+	div.container
+		div.sliderContainer
+			div.positioner.box-shadow
+				div.slider
+					a.content(href="/products/other")
+						img(src="/images/products/other/header.jpg")
+					a.content(href="/products/special")
+						img(src="/images/products/special/header.jpg")
+					a.content(href="/products/polyurethane")
+						img(src="/images/products/polyurethane/header.jpg")
+					a.content(href="/products/rubber")
+						img(src="/images/products/rubber/header.png")
+			div.sliderCtrl
+				a.toLeft(href="#")
+				a.toRight(href="#")
+		div.article
+			h1.title Megadyne
 
 block scripts
+	+script("/javascripts/util.js")
+	|<!--[if lte IE 9]>
+	+script("/javascripts/index.ie9.js")
+	|<![endif]-->
+	|<!--[if !IE ]><!-->
 	+script("/javascripts/index.js")
-
+	|<!--<![endif]-->

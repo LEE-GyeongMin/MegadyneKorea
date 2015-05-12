@@ -1,10 +1,13 @@
 extends ./layouts/main.jade
 
+block title
+	title Error | Megadyne Korea
+
 block links
 	+stylesheet("/stylesheets/error.css")
 
 block body
-	section.error
+	div.error
 		div
 			img(src="/images/top-logo.png")
 			h1 Page Not Found
