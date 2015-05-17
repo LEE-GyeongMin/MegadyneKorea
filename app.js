@@ -90,7 +90,7 @@ app.use('/products', products);
 
 // REQUESTS WITH NO HANDLER
 app.use(function(req, res, next) {
-	var err = new Error('URL Handler is Not Found');
+	var err = new Error('URL is Not Defined');
 	err.status = 404;
 	next(err);
 });
