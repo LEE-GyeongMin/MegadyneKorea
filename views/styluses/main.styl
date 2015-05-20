@@ -1,5 +1,7 @@
 // Variables
 //=================================================
+bodyWidth = 1000
+
 numOfSlides = 4
 sliderHeight = 300
 sliderButtonWidth = 21
@@ -8,12 +10,27 @@ sliderButtonHeight = 53
 body > .main
 	.container
 		position: relative
+		width: (bodyWidth) px
+		margin: 0 auto
 
 	.box-shadow
 		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-	
+
 	.border
 		border: 1px solid #dadada
+
+	.text.indent
+		text-indent: 20px
+
+// Product Browser
+//=================================================
+	.product-browser
+		position: absolute
+		width: 100%
+		height: 180px
+		top: 0
+		left: 0
+		background: url("/images/products/bg-product-browser.png")
 
 // Banner
 //=================================================
@@ -27,15 +44,20 @@ body > .main
 //=================================================
 	.article
 		padding: 15px 100px
+		.title,
+		.subtitle,
+		.text
+			line-height: 2em
 		.title
 			font-size: 2em
 			text-align: center
 			color: #e50005
-			line-height: 2em
+		.subtitle
+			font-size: 1.5em
+			color: #e50005
 		.text
 			color: #333
 			font-size: 1em
-			line-height: 2em
 			text-align: justify
 
 // Thumbnail Box
@@ -88,9 +110,12 @@ body > .main
 	.thumbnail-bar
 		display: block
 		position: relative
-		margin: 15px 50px
-		padding: 14px 49px
-		text-decoration: none
+		padding: 0 70px
+
+		table
+			width: 100%
+			padding: 30px
+			border-bottom: 1px dashed #e50005
 
 		.label
 			height: 40px
@@ -101,14 +126,27 @@ body > .main
 				padding-right: 7px
 				vertical-align: middle
 				height: 100%
-		.text
-			width: 470px
-			color: #333
-			font-size: 1em
-			line-height: 1.8em
-			text-align: justify
+		.summary
+			.text
+				color: #333
+				font-size: 1em
+				line-height: 1.8em
+				text-align: justify
+			.learn-more
+				margin: 0 7px
+				padding: 3px
+				line-height: 3em
+				text-decoration: none
+				> *
+					color: #08c
+			.learn-more:hover
+				border-bottom: 1px solid #08c
+			.learn-more
+				.icon
+					padding: 0 0 0 10px
 
 		.thumbnail
+			width: 300px
 			padding: 10px 0 10px 30px
 
 

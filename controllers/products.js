@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-var titleSuffix = ' | Megadyne Korea';
+var titleSuffix = 'Megadyne Korea - 제품';
 
 router.get('/', function(req, res, next) {
 	var pageScope = {
 		baseUrl: req.baseUrl,
-		title: '제품' + titleSuffix
+		title: titleSuffix
 	};
 
 	res.render('products', pageScope);
@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
 router.get('/test', function(req, res, next) {
 	var pageScope = {
 		baseUrl: req.baseUrl,
-		title: 'Test' + titleSuffix
+		title: titleSuffix + " - test"
 	};
 
 	res.render('products', pageScope);
