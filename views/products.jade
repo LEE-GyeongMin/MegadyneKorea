@@ -12,7 +12,7 @@ mixin thumbnail-bar(title, link, icon, thumbnail)
 					span.text 더 자세히 알아보기
 					span.icon >
 			td.thumbnail
-				img.box-shadow(src=thumbnail)
+				img.box-shadow.border(src=thumbnail)
 
 block title
 	title= title
@@ -30,7 +30,7 @@ block body
 			p.text MEGADYNE은 여러 가지 표준 제품을 두루 갖고 있으면서 동시에 더욱 다양한 산업군의 요구사항을 충족할 수 있도록 특수 설계된 제품들도 폭넓게 제공합니다. 대표적으로 열 경화성 및 열 가소성 폴리우레탄 벨트, 고무 타이밍 벨트, V 벨트, 클램핑 플레이트, 타이밍바를 생산하고 있으며, 모든 제품은 요구사항에 맞게 맞춤제작이 가능합니다.
 
 		+thumbnail-bar(
-			/* TITLE: */ "폴리우레탄",
+			/* TITLE: */ "폴리우레탄 벨트",
 			/* LINK: */ "/products/polyurethane",
 			/* ICON: */ "/images/products/belt-icon.png",
 			/* THUMBNAIL: */ "/images/products/polyurethane.jpg")

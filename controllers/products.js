@@ -1,7 +1,16 @@
 var express = require('express');
 var router = express.Router();
+var path = require('path');
 
 var titleSuffix = 'Megadyne Korea - 제품';
+
+var kinds = {
+	'polyurethane': '폴리우레탄 벨트',
+	'rubber': '고무 벨트',
+	'pulley': '풀리',
+	'other': '기타제품',
+	'special': '특수 벨트'
+};
 
 router.get('/', function(req, res, next) {
 	var pageScope = {
@@ -12,13 +21,27 @@ router.get('/', function(req, res, next) {
 	res.render('products', pageScope);
 });
 
-router.get('/test', function(req, res, next) {
+router.get('/:kind', function(req, res, next) {
+	var kind = req.param('kind');
+
 	var pageScope = {
 		baseUrl: req.baseUrl,
-		title: titleSuffix + " - test"
+		title: titleSuffix + ' - ' + kinds[kind]
 	};
 
-	res.render('products', pageScope);
+	res.render(path.join('products', kind), pageScope);
+});
+
+router.get('/:kind/:product', function(req, res, next) {
+	var kind = req.param('kind');
+	var product = req.param('product');
+
+	var pageScope = {
+		baseUrl: req.baseUrl,
+		title: titleSuffix + ' - ' + product.toUpperCase()
+	};
+
+	res.render(path.join('products', kind, product), pageScope);
 });
 
 module.exports = router;
