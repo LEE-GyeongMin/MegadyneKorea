@@ -8,14 +8,13 @@ block links
 
 block body
 	div.container
-		div.banner
-			img.box-shadow(src="/images/about/header.jpg")
+		+banner("/images/about/header.jpg")
 
 		div.article
 			h2.title 역사
 
 		div.youtube
-			iframe.box-shadow.border(width="480", height="360", src="http://www.youtube.com/embed/ajIOXCgEhWs?rel=0", frameborder="0", allowfullscreen)
+			iframe.boxShadow.border(width="480", height="360", src="http://www.youtube.com/embed/ajIOXCgEhWs?rel=0", frameborder="0", allowfullscreen)
 
 		+article()
 			h2.subtitle 1957, 시작
@@ -45,8 +44,7 @@ block body
 			p.text 시장의 선구자적 위치를 더욱 굳건히 하기 위해, 앞으로 MEGADYNE은 '스스로 성장'을 목표로 열심히 노력하겠습니다. 더 많은 전략적 인수를 생각하고 있기에, 시장 상황을 지속적으로 예의주시하고, 발빠르게 반응하겠습니다.
 
 
-
-		table.sub-page-box.two-rows
+		table.labelImageBox.twoRows
 			tr
 				td.label
 					img(src="/images/about/philosophy-icon.png")
@@ -55,11 +53,10 @@ block body
 					img(src="/images/about/mission-icon.png")
 					span.text 사명 (English)
 			tr
-				td.thumbnail
-					a.box-shadow.border(href="http://www.megadynegroup.com/en/content/philosophy", target="_blank")
+				td.image
+					a.boxShadow.border(href="http://www.megadynegroup.com/en/content/philosophy", target="_blank")
 						img(src="/images/about/philosophy.jpg")
-				td.thumbnail
-					a.box-shadow.border(href="http://www.megadynegroup.com/en/content/mission", target="_blank")
+				td.image
+					a.boxShadow.border(href="http://www.megadynegroup.com/en/content/mission", target="_blank")
 						img(src="/images/about/mission.png")
-
 
