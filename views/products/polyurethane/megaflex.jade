@@ -8,10 +8,21 @@ block links
 
 block body
 	div.container
-		div.banner
-			img.box-shadow(src="/images/products/polyurethane/megaflex/header.jpg")
+		+banner("/images/products/polyurethane/megaflex/header.jpg")
 
-		div.article
-			h2.title MEGAFLEX
-			p.text 동력전달과 선형위치결정에 사용되는 MEGADYNE 폴리우레탄 타이밍벨트는 우수한 강도는 물론 편리한 사용과 유지보수의 용이성까지 고려하여 설계되었습니다. 자주 사용되는 표준과 모든 피치 게이지(㎜)에 대응되는 제품폭을 갖고 있으며, 추가적으로 이들의 양면 조합 여부나 벨트의 폭을 결정할 수 있습니다. 특별주문을 통해 내부 강철심을 케블라(Kevlar)로 대체할 수 있습니다.
+		+article("MEGAFLEX")
+			p.text
+				span MEGAFLEX 타이밍 벨트는 열 가소성 폴리우레탄에 강철심을 보강해서 만들어집니다. MEGADYNE의 연구개발에 의해 탄생된 MEGAFLEX 벨트는 우수한 주행특성 및 높은 견인하중을 갖고 있습니다. 이러한 특성 덕분에 매우 높은 속도(10,000 RPM 까지)에서도 안정적으로 동력 전송을 할 수 있습니다.  
+				br
+				span 톱니에는 나일론 코팅이 되어있어 적은 소음과 낮은 마찰계수를 갖고 있습니다. 주행성능에도 도움이 되죠. 마찰에 의한 손상이 걱정되거나 무거운 제품 운반 등이 필요한 경우에는 벨트 뒷 면에 특수 코팅 옵션을 적용할 수 있습니다. 이러한 노력 덕분에 MEGADYNE 벨트는 수명이 다할 때까지 처음의 성능 그대로 사용할 수 있도록 만들어집니다.
+				br
+				span MEGAFLEX 타이밍 벨트의 피치는 최소 1.500㎜ 부터 최대 22.700㎜ 사이에서 선택 가능합니다.
+
+		+article()
+			h2.subtitle 구성
+			table.image-bar
+				td.text
+					p hello
+				td.image
+					img(src="/images/products/polyurethane/megaflex/info.jpg")
 

@@ -4,6 +4,29 @@ mixin stylesheet(url)
 mixin script(url)
 	script(src=url)
 
+mixin banner(imgSrc)
+	div.banner
+		img.box-shadow(src=imgSrc)
+
+mixin article(title)
+	div.article
+		h2.title= title
+		block
+
+mixin sub-page-bar(title, link, icon, thumbnail)
+	div.sub-page-bar
+		table
+			td.summary
+				div.label
+					img(src=icon)
+					span.subtitle= title
+				block
+				a.learn-more(href=link)
+					span.text 더 자세히 알아보기
+					span.icon >
+			td.thumbnail
+				img.box-shadow.border(src=thumbnail)
+
 doctype html
 html
 	head
