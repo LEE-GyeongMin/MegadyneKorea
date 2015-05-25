@@ -12,3 +12,6 @@ do-not-track/
 
 # Visual Studio Code
 .settings/
+
+# pdf
+catalogs/

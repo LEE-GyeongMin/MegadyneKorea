@@ -1,13 +1,5 @@
 extends ../../layouts/main.jade
 
-mixin LibImage(imgSrc)
-	td.image
-		img.border(src=imgSrc)
-
-mixin LibLabel(text)
-	td.label
-		span.text= text
-
 block title
 	title= title
 
@@ -16,9 +8,7 @@ block links
 
 block body
 	div.container
-		+banner("/images/products/polyurethane/megaflex/header.jpg")
-
-		+article("MEGAFLEX")
+		+article("MEGAFLAT")
 			p.text
 				span MEGAFLEX 타이밍 벨트는 열 가소성 폴리우레탄에 강철심을 보강해서 만들어집니다. MEGADYNE의 연구개발에 의해 탄생된 MEGAFLEX 벨트는 우수한 주행특성 및 높은 견인하중을 갖고 있습니다. 이러한 특성 덕분에 매우 높은 속도(10,000 RPM 까지)에서도 안정적으로 동력을 전달할 수 있습니다.  
 				br
@@ -74,43 +64,4 @@ block body
 					li Heavy Transport systems
 					li Wood Industry
 					li Food Industry
-
-		+article("Section types")
-		table.labelImageBox.fiveRows
-			tr
-				+LibImage("/images/products/polyurethane/megaflex/xlh.jpg")
-				+LibImage("/images/products/polyurethane/megaflex/xlh-dl.jpg")
-				+LibImage("/images/products/polyurethane/megaflex/t.jpg")
-				+LibImage("/images/products/polyurethane/megaflex/t-dl.jpg")
-				+LibImage("/images/products/polyurethane/megaflex/at.jpg")
-			tr
-				+LibLabel("X L H")
-				+LibLabel("X L H - DL")
-				+LibLabel("T")
-				+LibLabel("T - DL")
-				+LibLabel("AT")
-
-		table.labelImageBox.fiveRows
-			tr
-				+LibImage("/images/products/polyurethane/megaflex/at-dl.jpg")
-				+LibImage("/images/products/polyurethane/megaflex/mtd8.jpg")
-				+LibImage("/images/products/polyurethane/megaflex/rpp.jpg")
-				+LibImage("/images/products/polyurethane/megaflex/rpp-dl.jpg")
-				+LibImage("/images/products/polyurethane/megaflex/atg10.jpg")
-			tr
-				+LibLabel("AT - DL")
-				+LibLabel("MTD8")
-				+LibLabel("RPP")
-				+LibLabel("RPP - DL")
-				+LibLabel("ATG10")
-
-		table.labelImageBox.fiveRows
-			tr
-				+LibImage("/images/products/polyurethane/megaflex/p2.jpg")
-			tr
-				+LibLabel("P2")
-				+LibLabel()
-				+LibLabel()
-				+LibLabel()
-				+LibLabel()
 
