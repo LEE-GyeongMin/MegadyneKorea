@@ -4,9 +4,9 @@ mixin subPageBar(title, link, icon, thumbnail)
 	div.textImageBar.articleWidth
 		table
 			td.textBox
-				div.label
+				div.label.withIcon
 					img(src=icon)
-					span.subtitle= title
+					span= title
 				block
 				a.learnMore(href=link)
 					span.text 더 자세히 알아보기

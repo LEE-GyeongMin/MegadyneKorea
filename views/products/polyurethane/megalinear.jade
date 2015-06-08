@@ -1,0 +1,108 @@
+extends ../../layouts/main.jade
+
+mixin LibImage(imgSrc)
+	td.image
+		img.border(src = "/images/products/polyurethane/megalinear/" + imgSrc)
+
+mixin LibLabel(text)
+	td.label
+		span.text= text
+
+block title
+	title= title
+
+block links
+	+stylesheet("/stylesheets/main.css")
+
+block body
+	div.container
+		+banner("/images/products/polyurethane/megalinear/header.jpg")
+
+		+article("MEGALINEAR")
+			p.text
+				span MEGALINEAR 오픈 타이밍 벨트는 흰색 열 가소성 폴리우레탄으로 만들어져 우수한 내마모성을 갖고 있습니다. 다양한 등급의 강철심 덕분에 높은 견인력과 좋은 주행특성을 고루 갖췄습니다. 오차를 최대한 줄여 생산되었기 때문에 신뢰성과 치수 안정성 모두 우수합니다. 
+				br
+				span 특수한 작업을 위해 더 높은 주행성능이 필요할 경우 톱니와 벨트 뒷면에 나일론 코팅을 추가할 수 있습니다. 무거운 제품이나 기타 벨트에 손상을 줄 수 있는 물건의 운송을 위해 벨트 뒷면 폴리우레탄의 두께를 늘릴 수 있습니다.
+
+		div.textImageBar.articleWidth
+			table
+				td.image.left
+					img.boxShadow.border(src="/images/products/polyurethane/megalinear/component.jpg")
+				td.textBox
+					div.label
+						span 구성요소
+					div.text
+						ol
+							li MEGALINEAR는 92 ShA(쇼어 경도 타입 A)의 단단함을 가지는 흰색 열 가소성 폴리우레탄으로 구성됩니다. 높은 경도 덕분에 때문에 큰 충격이나 파동이 발생하는 상황에서도 강력한 내마모성을 갖고 있습니다.
+							li 고강도의 S형, Z형 평행 아연도금 강철 보강재는 높은 파괴 하중과 극도로 적은 신장률을 갖고 있습니다.
+
+		+article()
+			h2.subtitle 기계 - 화학적 성질 
+			ul.text
+				li 균일한 치수
+				li 적은 소음
+				li 유지보수의 편리함
+				li 높은 유연성
+				li 적절한 유연성과 신장성으로 높은 마찰력을 갖고 있는 강철 보강심
+				li 최대 선속도 70m/s
+				li 낮은 텐션(pretension)
+				li 균일한 길이
+				li 높은 내마모성
+				li 노화와 가수분해, 오존에 내성
+				li 작동 온도 -25 ℃ / +80 ℃
+				li 석유와 그리스(grease, 윤활유), 가솔린에 변하지 않음
+				li 산성과 알칼리성에 내성
+ 
+		+article()
+			h2.subtitle MEGALINEAR 응용분야
+			div.text
+				p
+					span MEGADYNE은 매우 다양한 분야에서 요구하는 수많은 벨트 사양을 만족시키기 위해 다양한 톱니 디자인과 내부 보강재, 그리고 이들의 조합에 대해 끊임없이 고민하고 개발합니다.
+					br
+					span 이같은 노력 덕분에 MEGALINEAR 벨트는 다음과 같이 많은 분야에서 성공적으로 사용됩니다:
+				ul
+					li 컨베이어
+					li 자동 슬라이딩 도어 및 차고 개방 시스템
+					li 엘리베이터
+					li 자동 처리 장치(automated handling devices)
+					li 선형 드라이버(linear drivers)
+					li 위치제어 시스템(positioning systems)
+					li 목재 산업
+					li 섬유 산업
+					li 세리그래프 산업(serigraphic industry)
+					li 유리 산업
+					li 돌과 대리석 산업
+					li 포장 산업
+					li 로봇 시스템
+					li 담배 산업
+					li 종이 및 판지 산업
+					li 화학 및 제약 산업
+
+		h1.title.center.paddingVertical Section types
+		table.labelImageBox.fiveRows
+			tr
+				+LibImage("m_x_l_h.jpg")
+				+LibImage("t.jpg")
+				+LibImage("at.jpg")
+				+LibImage("mtd.jpg")
+				+LibImage("rpp.jpg")
+			tr
+				+LibLabel("M / X / L / H")
+				+LibLabel("T")
+				+LibLabel("AT")
+				+LibLabel("MTD")
+				+LibLabel("RPP")
+
+		table.labelImageBox.fiveRows
+			tr
+				+LibImage("std.jpg")
+				+LibImage("hg_tg.jpg")
+				+LibImage("atg.jpg")
+				+LibImage("p.jpg")
+			tr
+				+LibLabel("STD")
+				+LibLabel("HG / TG")
+				+LibLabel("ATG")
+				+LibLabel("P")
+				+LibLabel()
+

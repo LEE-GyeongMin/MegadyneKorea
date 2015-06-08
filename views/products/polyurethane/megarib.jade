@@ -1,0 +1,69 @@
+extends ../../layouts/main.jade
+
+mixin LibImage(imgSrc)
+	td.image
+		img.border(src = "/images/products/polyurethane/megarib/" + imgSrc)
+
+mixin LibLabel(text)
+	td.label
+		span.text= text
+
+block title
+	title= title
+
+block links
+	+stylesheet("/stylesheets/main.css")
+
+block body
+	div.container
+		+banner("/images/products/polyurethane/megarib/header.jpg")
+
+		+article("MEGAPOWER")
+			p.text
+				span Megarib belts are manufactured in polyurethane with polyester tension cords, which combine the high flexibility of flat belts with the power transmission capability of v-belts.
+
+		div.textImageBar.articleWidth
+			table
+				td.image.left
+					img.boxShadow.border(src="/images/products/polyurethane/megarib/component.jpg")
+				td.textBox
+					div.label
+						span 구성요소
+					div.text
+						ol
+							li BELT BODY : thermoset polyurethane with 85 ± 5 ShA hardness
+							li TENSILE MEMBER: The tensile member consists of high- strength low-stretch polyester cords, which grant length stability.
+
+		+article()
+			h2.subtitle 기계 - 화학적 성질 
+			div.text
+				ul
+					li Even distribution of the working load throughout the complete belt width
+					li Compact smooth running drive system with low vibration
+					li Small pulley diameters can be used in combination with inside or outside idlers
+					li Linear belt speeds up to 60 m/s are possible
+					li High transmission ratio
+					li Flat pulleys can be used in order to reduce drive costs
+
+				p Difficult drive configurations, such as serpentine or twisted drives, can be designed due to the high flexibility of Megadyne PV belts
+ 
+		+article()
+			h2.subtitle MEGAPOWER 응용분야
+			div.text
+				ul
+					li Electric appliances
+					li Lawn & garden
+					li Power tools
+					li Woodworking equipment
+
+		h1.title.center.paddingVertical Section types
+		table.labelImageBox.fiveRows
+			tr
+				+LibImage("h.jpg")
+				+LibImage("j.jpg")
+				+LibImage("tb2.jpg")
+			tr
+				+LibLabel("H")
+				+LibLabel("J")
+				+LibLabel("TB2")
+

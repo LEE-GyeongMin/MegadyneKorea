@@ -14,7 +14,14 @@ body > .main
 		margin: 0 auto
 
 	.boxShadow
+		box-sizing: border-box
+		border: 1px solid #ccc
+		border-top: none
+		border-bottom-color: #bbb
 		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+
+	.boxShadow.border
+		border: 1px solid #e50005
 
 	.border
 		border: 1px solid #e50005
@@ -32,9 +39,9 @@ body > .main
 	.subtitle.center
 		text-align: center
 
-	.title.paddingTop,
-	.subtitle.padding-top
-		padding-top: 15px
+	.title.paddingVertical,
+	.subtitle.paddingVertical
+		padding: 30px 0 15px 0
 
 	.text
 		font-size: 1em
@@ -42,10 +49,13 @@ body > .main
 
 	ol,
 	ul
+		margin-bottom: 15px
 		padding: 0 0 0 2em
 	
 	ol
 		list-style-type: decimal
+		li
+			margin-bottom: 10px
 	ul
 		list-style-type: disc 
 
@@ -93,7 +103,7 @@ body > .main
 
 		.label,
 		.image
-			padding: 10px
+			padding: 5px
 			text-align: center
 			font-size: 0
 
@@ -151,26 +161,32 @@ body > .main
 
 		.textBox
 			.label
-				height: 40px
-				padding: 0 0 15px 0
-				font-size: 1.3em
 				color: #e50005
+				font-size: 1.4em
+				padding: 0 0 10px 0
+
+			.label.withIcon
+				height: 40px
+				padding: 0
 				img
+					margin-top: -10px
 					padding-right: 7px
 					vertical-align: middle
 					height: 100%
-				.subtitle
-					font-size: 1em
+
 			.text
 				color: #333
 				font-size: 1em
 				line-height: 1.8em
 				text-align: justify
+
 			.learnMore
-				margin: 0 7px
+				display: inline-block
+				margin: 10px 7px
 				padding: 3px
-				line-height: 3em
+				height: 30px
 				text-decoration: none
+				box-sizing: border-box
 				> *
 					color: #08c
 			.learnMore:hover
@@ -185,13 +201,20 @@ body > .main
 			padding: 10px 30px
 			img
 				width: 100%
+
 		.image.right
-			padding: 10px 0 10px 30px
+			padding-right: 0
 		.image.left
-			padding: 10px 30px 10px 0
+			padding-left: 0
 
 	.textImageBar.articleWidth
 		padding: 15px 100px
+
+	.textImageBar.smallImage
+		padding-top: 0
+		padding-bottom: 0
+		.image
+			width: 35%
 
 	.textImageBar.articleWidth.borderBottom
 		padding: 0 70px

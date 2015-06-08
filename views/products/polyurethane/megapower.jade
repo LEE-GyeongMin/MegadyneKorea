@@ -1,0 +1,88 @@
+extends ../../layouts/main.jade
+
+mixin LibImage(imgSrc)
+	td.image
+		img.border(src = "/images/products/polyurethane/megapower/" + imgSrc)
+
+mixin LibLabel(text)
+	td.label
+		span.text= text
+
+block title
+	title= title
+
+block links
+	+stylesheet("/stylesheets/main.css")
+
+block body
+	div.container
+		+banner("/images/products/polyurethane/megapower/header.jpg")
+
+		+article("MEGAPOWER")
+			p.text
+				span Megapower timing belts are manufactured by a unique thermoset moulding process.
+				br
+				span The high-grade polyurethane gives excellent abrasion and shear resistance, combined with a variety of graded steel cords, ensuring high strength and tractive resistance. The result is a timing belt with excellent dimensional stability. Megapower moulded timing belts are manufactured to a tight tolerance range, which assures consistent length and thickness.
+
+		div.textImageBar.articleWidth
+			table
+				td.image.left
+					img.boxShadow.border(src="/images/products/polyurethane/megapower/component.jpg")
+				td.textBox
+					div.label
+						span 구성요소
+					div.text
+						ol
+							li The body of the belts are grey/green thermoset polyurethane 88 ShA, characterised by high levels of wear resistance even in the presence of shock and surge loading. The thermoset polyurethane is obtained by mixing a prepolymer with a bonding compound and heating the mixture. After cooling down to ambient temperature, the result is a polyurethane with good chemical and mechanical characteristics giving the belt high performances and extended lifetime.
+							li High strength helically wound zinked steel tension members allow high breaking load and extremely low elongation.
+		+article()
+			p.text MEGAPOWER combines the advantages and properties of geared drives with those of V and Flat belts whilst eliminating the troubles typical of each of these types of transmission.
+
+		+article()
+			h2.subtitle 기계 - 화학적 성질 
+			ul.text
+				li 균일한 치수
+				li 적은 소음
+				li 유지보수의 편리함
+				li 높은 유연성
+				li 적절한 유연성과 신장성으로 높은 마찰력을 갖고 있는 강철 보강심
+				li 최대 선속도 70m/s
+				li 낮은 텐션(pretension)
+				li 균일한 길이
+				li 높은 내마모성
+				li 노화와 가수분해, 오존에 내성
+				li 작동 온도 -25 ℃ / +80 ℃
+				li 석유와 그리스(grease, 윤활유), 가솔린에 변하지 않음
+				li 산성과 알칼리성에 내성
+ 
+		+article()
+			h2.subtitle MEGAPOWER 응용분야
+			div.text
+				p
+					span 우수한 특성 덕분에 MEGAPOWER 벨트는 다음과 같이 많은 분야에서 성공적으로 사용됩니다:
+				ul
+					li 사무 자동화 장비
+					li 의료 기기
+					li 포장 기기
+					li 자동차
+					li 광학 기기
+					li 로봇 시스템
+					li 가전 제품
+					li 자동 판매기
+					li 식품 산업
+					li 섬유 산업
+					li 레저와 DIY(Do-It-Yourself) 장비
+
+		h1.title.center.paddingVertical Section types
+		table.labelImageBox.fiveRows
+			tr
+				+LibImage("m_x_l_h.jpg")
+				+LibImage("t.jpg")
+				+LibImage("t-dl.jpg")
+				+LibImage("at.jpg")
+			tr
+				+LibLabel("M / X / L / H")
+				+LibLabel("T")
+				+LibLabel("T - DL")
+				+LibLabel("AT")
+
