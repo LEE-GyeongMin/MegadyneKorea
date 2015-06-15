@@ -1,0 +1,43 @@
+extends ../layouts/main.jade
+
+block title
+	title= title
+
+block links
+	+stylesheet("/stylesheets/main.css")
+
+block body
+	div.container
+		div.banner
+			img.boxShadow(src="/images/products/rubber/header.png")
+
+		+article("고무 벨트")
+			p.text 대부분의 산업군에서 고무 벨트는 동력전달을 위해 널리 사용되고 있습니다. MEGADYNE의 고무 벨트는 양질의 재료들과 첨단기술로 만들어지고 있습니다.
+
+		h1.subtitle.center.paddingVertical 고무 벨트 종류
+
+		table.labelImageBox.fiveRows
+			tr
+				td.image
+					a.boxShadow.border(href="/products/rubber/v-belts")
+						img(src="/images/products/rubber/v-belts.jpg")
+				td.image
+					a.boxShadow.border(href="/products/rubber/pv-ribbed")
+						img(src="/images/products/rubber/pv-ribbed.jpg")
+				td.image
+					a.boxShadow.border(href="/products/rubber/megaflat-rubber")
+						img(src="/images/products/rubber/megaflat-rubber.jpg")
+				td.image.left
+					a.boxShadow.border(href="/products/rubber/isoran-synchronous")
+						img(src="/images/products/rubber/isoran-synchronous.jpg")
+			tr
+				td.label
+					span.text V-BELTS
+				td.label
+					span.text PV RIBBED BELTS
+				td.label
+					span.text MEGAFLAT RUBBER
+				td.label
+					span.text ISORAN SYNCHRONOUS BELTS
+
+

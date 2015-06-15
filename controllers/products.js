@@ -22,7 +22,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/:kind', function(req, res, next) {
-	var kind = req.param('kind');
+	var kind = req.params.kind;
 
 	var pageScope = {
 		baseUrl: req.baseUrl,
@@ -33,8 +33,8 @@ router.get('/:kind', function(req, res, next) {
 });
 
 router.get('/:kind/:product', function(req, res, next) {
-	var kind = req.param('kind');
-	var product = req.param('product');
+	var kind = req.params.kind;
+	var product = req.params.product;
 
 	var pageScope = {
 		baseUrl: req.baseUrl,

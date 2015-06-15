@@ -1,0 +1,105 @@
+extends ../../layouts/main.jade
+
+block title
+	title= title
+
+block links
+	+stylesheet("/stylesheets/main.css")
+
+mixin pvApplication(name, imgName)
+	div.textImageBar.articleWidth
+		table
+			td.image.left
+				img.boxShadow.border(src="/images/products/rubber/pv-ribbed/" + imgName)
+			td.textBox
+				div.label
+					span= name
+				block
+
+block body
+	div.container
+		div.banner
+			img.boxShadow(src="/images/products/rubber/pv-ribbed/header.jpg")
+
+		+article("PV RIBBED 벨트")
+			p.text Megadyne ribbed belts are endless rubber belts with longitudinal V shaped grooves. PV belts provide high flexibility and great power performance as they combine the benefits of flat and V belts.
+
+		div.textImageBar.articleWidth
+			table
+				td.image.left
+					img.boxShadow.border(src="/images/products/rubber/pv-ribbed/component.jpg")
+				td.textBox
+					div.label
+						span 구성요소
+					div.text
+						ul
+							li The belt body made of a special rubber compound which provides, due to its excellent mechanical characteristics, high trasmission efficiency and assures a minimum rubber wear off
+							li Tensile member consisting in high-strength lowstretch cords, which grant length stability over the belt life time.
+							li Fabric jacket or cover made of fabric, protecting the tensile.
+
+		+article()
+			h2.subtitle 기계 - 화학적 성질 
+			ul.text
+				li eliminates belt matching
+				li permits drive design to meet exact power or space requirements
+				li distributes the drive load across the entire belt width
+				li permits cooler running and high drive efficiency
+				li excels on small pulleys at high speeds
+				li compact smooth running drive system with low vibration
+				li linear belt speeds up to 60 m/s are possible
+				li high transmission ratio
+				li resistance to temperatures from –30 to +80 ºC
+				li power performance can be improved by increasing the number of ribs
+				li antistatic properties according to ISO 1813.
+				
+		+article()
+			h2.subtitle 벨트 종류와 응용분야
+			p.text
+				span High performance PV-ribbed belts are produced in H, J, L and m profiles (K on request).
+				br
+				span PV-ribbed belts are also available in elastic version (tem) and they are suitable in the transmission where fixed centre distance is required.
+				br
+				span The tem belt is developed according to customer requirements.
+				br
+				br
+				span 우수한 특성 덕분에 PV RIBBED 벨트는 다음과 같이 많은 분야에서 성공적으로 사용됩니다:
+		
+		+pvApplication("P H", "h.jpg")
+			ul.text
+				li Household appliances
+				li Dryers
+				li Washing machines
+		
+		+pvApplication("P J", "j.jpg")
+			ul.text
+				li Automatic doors
+				li Fitness equipment
+				li Laundry machines
+				li Concrete mixers
+				li Floor care equipment
+				li Compressors
+				li Lift appliances etc...
+
+		+pvApplication("P K", "k.jpg")
+			ul.text
+				li Tractors
+				li Fans
+				li Pumps & compressors
+				li Wood industry
+
+		+pvApplication("P L", "l.jpg")
+			ul.text
+				li High pressure cleaners
+				li Flour mills
+				li Crushers
+				li Escalators
+				li Construction industy
+
+		+pvApplication("P M", "m.jpg")
+			ul.text
+				li Paper industry
+				li Hammer mills
+				li Turbines
+				li Quarries
+				li Excavators, etc...
+

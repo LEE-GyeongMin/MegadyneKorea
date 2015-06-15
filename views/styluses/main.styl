@@ -7,6 +7,8 @@ sliderHeight = 300
 sliderButtonWidth = 21
 sliderButtonHeight = 53
 
+// GLOBAL
+//=================================================
 body > .main
 	.container
 		position: relative
@@ -117,13 +119,13 @@ body > .main
 				vertical-align: middle
 				height: 100%
 
-		.image
-			a
+		.image > *
 				display: inline-block
 				font-size: 0
 				box-sizing: border-box
-			img
-				width: 100%
+
+				img
+					width: 100%
 
 	.labelImageBox.twoRows
 		.label,
@@ -144,7 +146,7 @@ body > .main
 		.label,
 		.image
 			width: (100 / 5) %
-			padding: 3px 5px
+			padding: 5px
 		.label
 			height: 20px
 			font-size: 1em

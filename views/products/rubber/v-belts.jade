@@ -1,0 +1,119 @@
+extends ../../layouts/main.jade
+
+mixin LibImage(imgSrc)
+	td.image
+		img.border(src = "/images/products/rubber/v-belts/" + imgSrc)
+
+mixin LibLabel(text)
+	td.label
+		span.text= text
+
+block title
+	title= title
+
+block links
+	+stylesheet("/stylesheets/main.css")
+
+block body
+	div.container
+		+banner("/images/products/rubber/v-belts/header.jpg")
+
+		+article("V-BELTS")
+			p.text
+				span Megadyne V-belts have been used for decades in many different industries and applications, giving drive solution to customers all over the world. Precision technology allows the manufacture of dimensionally precise belts. This is especially important for drives using common shafts.
+
+		table.labelImageBox.twoRows
+			tr
+				td.label
+					span.text Wrapped V-Belts
+				td.label
+					span.text Raw Edge V-Belts
+			tr
+				td.image
+					.boxShadow.border
+						img(src="/images/products/rubber/v-belts/wrapped.jpg")
+				td.image
+					.boxShadow.border
+						img(src="/images/products/rubber/v-belts/raw_edge.jpg")
+
+		div.textImageBar.articleWidth
+			.textBox
+				div.label
+					span 구성요소
+				div.text
+					ol
+						li
+							span THE BODY
+							br
+							span The belt body made of a special rubber compound which provides, due to its excellent mechanical characteristics, high trasmission efficiency and assures a minimum rubber wear off;
+						li
+							span TENSILE MEMBER
+							br
+							span Tensile member consisting in high-strength lowstretch cords, which grant length stability over the belt life time.
+						li
+							span BELT BACK
+							br
+							span Fabrik jacket or cover made of fabric, protecting the tensile.
+
+					p
+						span Applied technology allows to reach so good dimensional precision in v-belt to make them suitable for multiple trasmissions.
+						br
+						span This dimensional stability continues also during belt use.
+
+		+article()
+			h2.subtitle 기계 - 화학적 성질 
+			ul.text
+				li Smooth starting and running
+				li Wide range of driven speeds, using standard electric motors
+				li Low maintenance
+				li High efficienct
+				li No need for lubrification
+				li Extremely wide horsepower rangers
+				li Dampen vibration between driver and driven pulleys
+				li Silent operations
+				li Long service life
+				li Easy installation
+				li Reduction in drive dimension
+				li Working temperature range -30°C to +70°
+				li Resistance to oil and heat
+				li Antistatic properties
+ 
+		h1.title.center.paddingVertical Section types
+		table.labelImageBox.fiveRows
+			tr
+				+LibImage("x_l_h.jpg")
+				+LibImage("x_l_h-dl.jpg")
+				+LibImage("t.jpg")
+				+LibImage("t-dl.jpg")
+				+LibImage("at.jpg")
+			tr
+				+LibLabel("X / L / H")
+				+LibLabel("X / L / H - DL")
+				+LibLabel("T")
+				+LibLabel("T - DL")
+				+LibLabel("AT")
+
+		table.labelImageBox.fiveRows
+			tr
+				+LibImage("at-dl.jpg")
+				+LibImage("mtd8.jpg")
+				+LibImage("rpp.jpg")
+				+LibImage("rpp-dl.jpg")
+				+LibImage("atg10.jpg")
+			tr
+				+LibLabel("AT - DL")
+				+LibLabel("MTD8")
+				+LibLabel("RPP")
+				+LibLabel("RPP - DL")
+				+LibLabel("ATG10")
+
+		table.labelImageBox.fiveRows
+			tr
+				+LibImage("p2.jpg")
+			tr
+				+LibLabel("P2")
+				+LibLabel()
+				+LibLabel()
+				+LibLabel()
+				+LibLabel()
+
