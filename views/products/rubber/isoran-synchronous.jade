@@ -1,0 +1,105 @@
+extends ../../layouts/main.jade
+
+mixin LibImage(imgSrc)
+	td.image
+		img.boxShadow.border(src = "/images/products/rubber/isoran-synchronous/" + imgSrc)
+
+mixin LibLabel(text)
+	td.label
+		span.text= text
+
+block title
+	title= title
+
+block links
+	+stylesheet("/stylesheets/main.css")
+
+block body
+	div.container
+		+banner("/images/products/rubber/isoran-synchronous/header.jpg")
+
+		+article("ISORAN SYNCHRONOUS 벨트")
+			p.text
+				span Megadyne’s Synchronous belts put together the advantages of gears and V-belts minimizing the drawbacks of both.
+
+		div.textImageBar.articleWidth
+			table
+				td.image.left
+					img.boxShadow.border(src="/images/products/rubber/isoran-synchronous/component.jpg")
+				td.textBox
+					div.label
+						span 구성요소
+					div.text
+						ol
+							li
+								span The body is made of high quality chloroprene compound having:
+								ul
+									li high fatigue resistance
+									li high resistance to heat and environmental agents
+									li good resistance to mineral oils
+									li total shape keeping by the time
+		+article()
+			ol.text
+				li(style="list-style: none;")
+					span According to the kind of belt hardness will change:
+					ul
+						li 74 ShA for Isoran, Isoran DD, Isoran RPP and Isoran RPP DD
+						li 90 ShA for Isoran Silver and Isoran Gold
+						li Silver and Gold belts have higher quality and features compound each to get higher performances.
+				li
+					span Cord is made by high elasticity module fiberglass spiral strands with bifilar spiral layout having:
+					ul
+						li high Breaking Strength
+						li very good resistance to bending
+						li no elongation by the time
+						li very good adhesion with the belt’s body
+					span Gold belts have specific high power K-glass cords.
+				li  Nylon fabric on the teeth is treated to improve lubrication during working; this allows to have:
+					ul
+						li extreme abrasion resistance
+						li low friction coefficient
+						li high transmission efficiency
+						li long belt and pulley's operational life
+
+		+article()
+			h2.subtitle 기계 - 화학적 성질 
+			ul.text
+				li synchronous transmission
+				li high and constant angular speeds
+				li high efficiency
+				li resistance to peak high loads
+				li low noise transmission
+				li no lubrication
+				li no maintenance
+				li linear speed up to 30 m/s
+				
+		+article()
+			h2.subtitle ISORAN SYNCHRONOUS 벨트 응용분야
+			div.text
+				p 우수한 특성 덕분에 ISORAN SYNCHRONOUS 벨트는 다음과 같이 많은 분야에서 성공적으로 사용됩니다:
+				ul
+					li appliances
+					li wood industry
+					li cooling systems
+					li packaging industry
+ 
+		h2.subtitle.center.paddingVertical ISORAN SYNCHRONOUS 벨트 종류
+		table.labelImageBox.threeRows
+			tr
+				+LibImage("silver gold.jpg")
+				+LibImage("rpp.jpg")
+				+LibImage("classical.jpg")
+			tr
+				+LibLabel("ISORAN RPP SILVER AND RPP GOLD")
+				+LibLabel("ISORAN RPP")
+				+LibLabel("ISORAN CLASSICAL SYNCHRONOUS")
+		table.labelImageBox.threeRows
+			tr
+				+LibImage("platinum.jpg")
+				+LibImage("open end.jpg")
+				+LibImage("rpp megapaint.jpg")
+			tr
+				+LibLabel("PLATINUM")
+				+LibLabel("ISORAN OPEN END SYNCHRONOUS")
+				+LibLabel("RPP MEGAPAINT")
+

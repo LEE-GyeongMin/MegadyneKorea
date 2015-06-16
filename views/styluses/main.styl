@@ -56,7 +56,7 @@ body > .main
 	
 	ol
 		list-style-type: decimal
-		li
+		> li
 			margin-bottom: 10px
 	ul
 		list-style-type: disc 
@@ -88,6 +88,8 @@ body > .main
 		.subtitle,
 		.text
 			line-height: 2em
+		.text *
+			line-height: 2em
 		.title
 			text-align: center
 		.text
@@ -110,14 +112,23 @@ body > .main
 			font-size: 0
 
 		.label
-			height: 40px
-			font-size: 1.3em
+			height: 25px
+			font-size: 1em
 			color: #e50005
 			img
 				margin-left: -22px
 				padding-right: 7px
 				vertical-align: middle
 				height: 100%
+			.text
+				color: #e50005
+				text-decoration: none
+			a.text:hover
+				text-decoration: underline
+		
+		.label.large
+			height: 35px
+			font-size: 1.2em
 
 		.image > *
 				display: inline-block
@@ -149,7 +160,6 @@ body > .main
 			padding: 5px
 		.label
 			height: 20px
-			font-size: 1em
 
 // text-image-bar
 //=================================================

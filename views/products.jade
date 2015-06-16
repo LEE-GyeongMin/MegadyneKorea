@@ -12,7 +12,8 @@ mixin subPageBar(title, link, icon, thumbnail)
 					span.text 더 자세히 알아보기
 					span.icon >
 			td.image
-				img.boxShadow.border(src=thumbnail)
+				a(href=link)
+					img.boxShadow.border(src=thumbnail)
 
 block title
 	title= title

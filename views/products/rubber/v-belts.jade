@@ -2,7 +2,7 @@ extends ../../layouts/main.jade
 
 mixin LibImage(imgSrc)
 	td.image
-		img.border(src = "/images/products/rubber/v-belts/" + imgSrc)
+		img.boxShadow.border(src = "/images/products/rubber/v-belts/" + imgSrc)
 
 mixin LibLabel(text)
 	td.label
@@ -18,16 +18,16 @@ block body
 	div.container
 		+banner("/images/products/rubber/v-belts/header.jpg")
 
-		+article("V-BELTS")
+		+article("V-벨트")
 			p.text
 				span Megadyne V-belts have been used for decades in many different industries and applications, giving drive solution to customers all over the world. Precision technology allows the manufacture of dimensionally precise belts. This is especially important for drives using common shafts.
 
 		table.labelImageBox.twoRows
 			tr
-				td.label
-					span.text Wrapped V-Belts
-				td.label
-					span.text Raw Edge V-Belts
+				td.label.large
+					span.text Wrapped V-벨트
+				td.label.large
+					span.text Raw Edge V-벨트
 			tr
 				td.image
 					.boxShadow.border
@@ -78,42 +78,36 @@ block body
 				li Resistance to oil and heat
 				li Antistatic properties
  
-		h1.title.center.paddingVertical Section types
-		table.labelImageBox.fiveRows
+		h2.subtitle.center.paddingVertical Wrapped V-벨트 종류
+		table.labelImageBox.threeRows
 			tr
-				+LibImage("x_l_h.jpg")
-				+LibImage("x_l_h-dl.jpg")
-				+LibImage("t.jpg")
-				+LibImage("t-dl.jpg")
-				+LibImage("at.jpg")
+				+LibImage("oleostatic.png")
+				+LibImage("extra.png")
+				+LibImage("esaflex.png")
 			tr
-				+LibLabel("X / L / H")
-				+LibLabel("X / L / H - DL")
-				+LibLabel("T")
-				+LibLabel("T - DL")
-				+LibLabel("AT")
+				+LibLabel("OLEOSTATIC")
+				+LibLabel("EXTRA V-BELTS")
+				+LibLabel("ESAFLEX")
+		table.labelImageBox.twoRows
+			tr
+				td.image.left
+					img.boxShadow.border(src = "/images/products/rubber/v-belts/pluriband.png")
+				td.image.right
+					img.boxShadow.border(src = "/images/products/rubber/v-belts/xdv2.png")
+			tr
+				td.label.left
+					span.text PLURIBAND
+				td.label.right
+					span.text XDV2
 
-		table.labelImageBox.fiveRows
+		h2.subtitle.center.paddingVertical RAW EDGE V-벨트 종류
+		table.labelImageBox.threeRows
 			tr
-				+LibImage("at-dl.jpg")
-				+LibImage("mtd8.jpg")
-				+LibImage("rpp.jpg")
-				+LibImage("rpp-dl.jpg")
-				+LibImage("atg10.jpg")
+				+LibImage("linea-x.png")
+				+LibImage("gold label cog.png")
+				+LibImage("varisect.png")
 			tr
-				+LibLabel("AT - DL")
-				+LibLabel("MTD8")
-				+LibLabel("RPP")
-				+LibLabel("RPP - DL")
-				+LibLabel("ATG10")
-
-		table.labelImageBox.fiveRows
-			tr
-				+LibImage("p2.jpg")
-			tr
-				+LibLabel("P2")
-				+LibLabel()
-				+LibLabel()
-				+LibLabel()
-				+LibLabel()
+				+LibLabel("LINEA-X")
+				+LibLabel("GOLD LABEL COG BELTS")
+				+LibLabel("VARISECT")
 
