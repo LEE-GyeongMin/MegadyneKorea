@@ -1,0 +1,23 @@
+extends ../../layouts/main.jade
+
+mixin LibImage(imgSrc)
+	td.image
+		img.boxShadow.border(src = "/images/products/rubber/v-belts/" + imgSrc)
+
+mixin LibLabel(text)
+	td.label
+		span.text= text
+
+block title
+	title= title
+
+block links
+	+stylesheet("/stylesheets/main.css")
+
+block body
+	div.container
+		+banner("/images/products/other/megaweld/header.jpg")
+
+		+article("MEGAWELD")
+			p.text Large choice of weldable belts for numerous applications
+

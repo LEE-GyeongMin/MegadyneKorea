@@ -1,7 +1,7 @@
 extends ../../layouts/main.jade
 
 mixin megaflatProduct(name, imgName)
-	div.textImageBar.articleWidth.smallImage
+	div.textImageBar.smallImage
 		table
 			td.image.left
 				img.boxShadow.border(src="/images/products/polyurethane/megaflat/" + imgName)
@@ -24,21 +24,22 @@ block body
 				br
 				span MEGAFLAT 벨트는 컨베어 용도와 동력 전달 모두에 적합합니다. 표준폭 330㎜ 슬리브로 제조됩니다.
 
-		div.textImageBar.articleWidth
-			table
-				td.image.left
-					img.boxShadow.border(src="/images/products/polyurethane/megaflat/component.jpg")
-				td.textBox
-					div.label
-						span 구성요소
-					div.text
-						ol
-							li MEGAFLAT은 폴리우레탄이나 클로로프렌 고무로 구성됩니다.
-							li 탄탄하게 직조된 보강재로 폴리에스테르나 아라미드, 또는 면으로 구성됩니다.
+		+article()
+			div.textImageBar.articleWidth
+				table
+					td.image.left
+						img.boxShadow.border(src="/images/products/polyurethane/megaflat/component.jpg")
+					td.textBox
+						div.label
+							span 구성요소
+						div.text
+							ol
+								li MEGAFLAT은 폴리우레탄이나 클로로프렌 고무로 구성됩니다.
+								li 탄탄하게 직조된 보강재로 폴리에스테르나 아라미드, 또는 면으로 구성됩니다.
 
 		+article()
 			h2.subtitle 기계 - 화학적 성질 
-			ul.text
+			ul
 				li 요구에 따른 색상 추가 가능
 				li 요구에 따른 치수 추가 가능
 				li 벨트 측면의 두께를 0.3 - 0.5㎜ 정도 늘릴 수 있음
@@ -48,39 +49,39 @@ block body
 			h2.subtitle 제품 종류
 			p.text 모든 MEGAFLAT 벨트는  이음매가 없도록 성형된 맨드릴 벨트 (endless mandrel moulded belt) 입니다.
 
-		+megaflatProduct("P 0", "p0.jpg")
-			p.text
-				span P 0 는 폴리우레탄 벨트로써, 별도의 보강재가 없습니다.
-				br
-				span 복사기와 같은 중심거리 고정 드라이브 시스템(fixed center distance drive system)에 적합합니다.
-		+megaflatProduct("P 102", "p102.jpg")
-			p.text
-				span P 102 는 폴리우레탄 벨트로써, 탄성 직물(elastic fabric) 과 나일론의 조합으로 보강됩니다.
-				br
-				span 종이 운반 기계와 같은 중심거리 고정 드라이브 시스템(fixed center distance drive system)에 적합합니다.
-		+megaflatProduct("P 108", "p108.jpg")
-			p.text
-				span P 108 은 폴리우레탄 벨트로써, 폴리에스테르 - 나일론 직물로 보강되어 있습니다. 매우 유연하면서 드라이브 측면(drive side)과의 마찰계수가 낮습니다.
-				br
-				span 나이프 에지(knife edge) 전송에 적합힙니다.
-		+megaflatProduct("P 110", "p110.jpg")
-			p.text
-				span P 110 은 폴리우레탄 벨트로써, 폴리에스테르 직물로 보강되어 있습니다.
-				br
-				span 그라인딩 머신(grinding machine)과 같은 플렉시블 드라이브(flexible drive)와 전송 시스템(transport system)에 적합합니다.
-		+megaflatProduct("P 120", "p120.jpg")
-			p.text
-				span P 120 은 폴리우레탄 벨트로써, 폴리에스테르 직물로 보강되어 있습니다.
-				br
-				span 많은 힘을 받는 드라이브 시스템에 적합합니다.
-		+megaflatProduct("P 155", "p155.jpg")
-			p.text
-				span P 155 는 폴리우레탄 벨트로써, 아라미드 - 폴리에스테르 직물로 보강되어 있습니다. 잘 늘어나지 않으면서 높은 인장 강도(high tensile strength)를 갖고 있습니다.
-				br
-				span 컨베이어 시스템에 적합합니다.
-		+megaflatProduct("S 110", "s110.jpg")
-			p.text
-				span S 110 은 실리콘 벨트로써, 폴리에스테르 직물로 보강되어 있습니다. 범용적인 전송 벨트로, 고온과 저온에 내성이 있습니다. 
-				br
-				span 음식 등을 옮길 때 적합합니다.
+			+megaflatProduct("P 0", "p0.jpg")
+				p.text
+					span P 0 는 폴리우레탄 벨트로써, 별도의 보강재가 없습니다.
+					br
+					span 복사기와 같은 중심거리 고정 드라이브 시스템(fixed center distance drive system)에 적합합니다.
+			+megaflatProduct("P 102", "p102.jpg")
+				p.text
+					span P 102 는 폴리우레탄 벨트로써, 탄성 직물(elastic fabric) 과 나일론의 조합으로 보강됩니다.
+					br
+					span 종이 운반 기계와 같은 중심거리 고정 드라이브 시스템(fixed center distance drive system)에 적합합니다.
+			+megaflatProduct("P 108", "p108.jpg")
+				p.text
+					span P 108 은 폴리우레탄 벨트로써, 폴리에스테르 - 나일론 직물로 보강되어 있습니다. 매우 유연하면서 드라이브 측면(drive side)과의 마찰계수가 낮습니다.
+					br
+					span 나이프 에지(knife edge) 전송에 적합힙니다.
+			+megaflatProduct("P 110", "p110.jpg")
+				p.text
+					span P 110 은 폴리우레탄 벨트로써, 폴리에스테르 직물로 보강되어 있습니다.
+					br
+					span 그라인딩 머신(grinding machine)과 같은 플렉시블 드라이브(flexible drive)와 전송 시스템(transport system)에 적합합니다.
+			+megaflatProduct("P 120", "p120.jpg")
+				p.text
+					span P 120 은 폴리우레탄 벨트로써, 폴리에스테르 직물로 보강되어 있습니다.
+					br
+					span 많은 힘을 받는 드라이브 시스템에 적합합니다.
+			+megaflatProduct("P 155", "p155.jpg")
+				p.text
+					span P 155 는 폴리우레탄 벨트로써, 아라미드 - 폴리에스테르 직물로 보강되어 있습니다. 잘 늘어나지 않으면서 높은 인장 강도(high tensile strength)를 갖고 있습니다.
+					br
+					span 컨베이어 시스템에 적합합니다.
+			+megaflatProduct("S 110", "s110.jpg")
+				p.text
+					span S 110 은 실리콘 벨트로써, 폴리에스테르 직물로 보강되어 있습니다. 범용적인 전송 벨트로, 고온과 저온에 내성이 있습니다. 
+					br
+					span 음식 등을 옮길 때 적합합니다.
 

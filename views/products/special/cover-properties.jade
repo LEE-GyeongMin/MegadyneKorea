@@ -1,0 +1,77 @@
+extends ../../layouts/main.jade
+
+mixin coverProperty(name, imgName)
+	div.textImageBar.smallImage
+		table
+			td.image.left
+				img.boxShadow.border(src="/images/products/special/cover-properties/" + imgName)
+			td.textBox
+				div.label
+					span= name
+				block
+
+block title
+	title= title
+
+block links
+	+stylesheet("/stylesheets/main.css")
+
+block body
+	div.container
+		div.banner
+			img.boxShadow(src="/images/products/special/cover-properties/header.jpg")
+
+		+article("특수 코팅")
+			p.text Megadyne offers a variety of coverings in Polyurethane, elastomer, foam, PVC and other unique solutions, designed with for your specific requirements. Choose covering that interests you and request information from our OEM team, we will suggest the right solution.
+
+		+article()
+			h2.subtitle 제품 종류
+			+coverProperty("AVAFC 60 / 70 / 85", "avafc.jpg")
+				p.text Coating used for conveying abrasive materials, with high friction coefficient, very good resistance to oil and good to abrasion.
+			+coverProperty("FOAMED POLYURETHANE", "foamed-polyurethane.jpg")
+				p.text Coating use for vacuum conveying systems, with good resistance to friction, good resistance to oil and to abrasion.
+			+coverProperty("FISHBONE", "fishbone.jpg")
+				p.text Coating used for coveying system in glass industry, with high fiction coefficient and very good resistance to oil.
+
+		
+		+article()
+			+coverProperty("RIBBED", "ribbed.jpg")
+				p.text Coating used for packaging industry, with high friction coefficient and very good resistance to the oil.
+			+coverProperty("LINATEX", "linatex.jpg")
+				p.text Coating used for conveying abrasive materials, with high friction coefficient, god resistance to wear and to water.
+			+coverProperty("TENAX 40", "tenax.jpg")
+				p.text Coating used for conveying abrasive materials, using materials with high friction coefficient and good wear resistance.
+
+		+article()
+			+coverProperty("TENAX STANDARD ", "tenax.jpg")
+				p.text Coating used for conveying abrasive materials, using materials with high friction coefficient and good wear resistance.
+			+coverProperty("GUMMY CORREX AMBRA PARABLOND ", "gummy-correx-ambra-parablond.jpg")
+				p.text Coatching used for conveyors system, using materials with good friction resistance, low resistance to oil and wear but very good to water.
+			+coverProperty("HONEY COMB", "honey-comb.jpg")
+				p.text Coating used for packaging industry, natural rubber with good resilience and high wear resistance. Very good water resistance.
+
+		+article()
+			+coverProperty("HYPALON ", "hypalon.jpg")
+				p.text Coating used for conveyors system, using materials with good friction resistance and good resistance to water, oils and wear.
+			+coverProperty("WHITE RUBBER FOR FOOD INDUSTRY", "white-rubber.jpg")
+				p.text Coating used for conveying food, with good resistance to water, natural oils and natural greases. Easy to clean.
+			+coverProperty("NEOPRENE", "neoprene.jpg")
+				p.text Coating used for conveying delicate and small items, with good resistance to the oils and abrasion. The material used is not flammable self extinguishing.
+
+		+article()
+			+coverProperty("POROL MOUSSE ", "porol-mousse.jpg")
+				p.text Coating used for conveying fragile items, using materials with high friction coefficient and intermediate resistance to oils and greases.
+			+coverProperty("NBR ", "nbr.jpg")
+				p.text Coating used where high abrasion resistance is needed, with low compression set and high elasticity.
+			+coverProperty("PVC SUPERGRIP", "pvc-supergrip.jpg")
+				p.text Coating used for conveying very different materials like wood and paper, using materials with good friction resistance and good resistance to water and oil.
+		
+		+article()
+			+coverProperty("NFT NYLON FABRIC BACK / TEETH", "nft-teeth.jpg")
+				p.text Coating used for conveying system, with low friction coefficient and intermediate resistance to oils but good to water.
+			+coverProperty("RED GRIP", "red-grip.jpg")
+				p.text Coating used for conveying very different materials, with high friction coefficient, good resistance to water and very good resistance to oils and abrasion.
+			+coverProperty("APL", "apl.jpg")
+				p.text Coating used for conveying very different materials, with high fiction coefficient and good resistance to oils and wear.
+			
+			

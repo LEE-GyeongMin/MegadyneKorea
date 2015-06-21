@@ -1,0 +1,31 @@
+extends ../../layouts/main.jade
+
+block title
+	title= title
+
+block links
+	+stylesheet("/stylesheets/main.css")
+
+block body
+	div.container
+		div.banner
+			img.boxShadow(src="/images/products/pulley/flanges/header.jpg")
+
+		+article("플랜지")
+
+		+article()
+			div.textImageBar
+				table
+					td.textBox
+						div.text
+							span Full selection of stock aluminum and steel timing pulley flanges.
+							br
+							span Available in custom and standard , our high-quality timing pulley flanges are ideal for:
+							ul
+								li Custom pulleys for specific applications;
+								li Quick and inexpensive prototypes;
+								li Unique material and performance specifications.
+					td.image.right
+						img.boxShadow.border(src="/images/products/pulley/flanges/info.jpg")
+
+

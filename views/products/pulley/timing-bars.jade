@@ -1,0 +1,25 @@
+extends ../../layouts/main.jade
+
+block title
+	title= title
+
+block links
+	+stylesheet("/stylesheets/main.css")
+
+block body
+	div.container
+		div.banner
+			img.boxShadow(src="/images/products/pulley/timing-bars/header.jpg")
+
+		+article("타이밍 바")
+
+		+article()
+			div.textImageBar
+				table
+					td.textBox
+						div.text
+							p Timing bars are toothed steel or aluminium cylinders, available in standard or custom made to drawing.
+					td.image.right
+						img.boxShadow.border(src="/images/products/pulley/timing-bars/info.jpg")
+
+

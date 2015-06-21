@@ -1,0 +1,25 @@
+extends ../../layouts/main.jade
+
+block title
+	title= title
+
+block links
+	+stylesheet("/stylesheets/main.css")
+
+block body
+	div.container
+		div.banner
+			img.boxShadow(src="/images/products/pulley/taper-bushes/header.jpg")
+
+		+article("테이퍼 부쉬")
+
+		+article()
+			div.textImageBar
+				table
+					td.textBox
+						div.text
+							p The taper bushes allow easy mountig and quick removal of the transmission,thus eliminatig the clearance between shaft and hole. Megadyne able to provide a range of different types of taper bushes, each with a wide range of bore diameters and different types of keyway.
+					td.image.right
+						img.boxShadow.border(src="/images/products/pulley/taper-bushes/info.jpg")
+
+

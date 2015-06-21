@@ -1,0 +1,14 @@
+extends ../../layouts/main.jade
+
+block title
+	title= title
+
+block links
+	+stylesheet("/stylesheets/main.css")
+
+block body
+	div.container
+		+article("컨베어 벨트")
+			div.banner
+				img.boxShadow(src="/images/products/other/conveyor/header.jpg")
+

@@ -1,0 +1,64 @@
+extends ../../layouts/main.jade
+
+mixin LibImage(imgSrc)
+	td.image
+		img.boxShadow.border(src = "/images/products/rubber/v-belts/" + imgSrc)
+
+mixin LibLabel(text)
+	td.label
+		span.text= text
+
+block title
+	title= title
+
+block links
+	+stylesheet("/stylesheets/main.css")
+
+block body
+	div.container
+		+banner("/images/products/other/accu-link/header.jpg")
+
+		+article("ACCU-LINK")
+			p.text
+				span Designed as emergency belts to be used in place of V-belts in case of unexpected failure, today Accu-Link find applications in many other fields.
+
+		+article()
+			div.textImageBar
+				table
+					td.image.left
+						img.boxShadow.border(src="/images/products/other/accu-link/component.jpg")
+					td.textBox
+						div.label
+							span 구성요소
+						div.text
+							span Made of urethane elastomer reinforced with a rugged, woven polyester fabric. Accu-Link  belts are manufactured with a revolutionary new process which creates smooth, precise side profiles on each link. This smooth profile creates less vibration and requires lower drive tensions for increased belt life.
+
+
+		+article()
+			h2.subtitle 기계 - 화학적 성질 
+			p.text Accu-Link main advantages are:
+			ul
+				li Flexibility thanks to the possibility to adjust the length modifying the number of links
+				li Reduce misalignment
+				li Easier to install (no need to disassemble the pulleys)
+
+		+article()
+			h2.subtitle ACCU-LINK 응용분야 
+			div.text
+				span The ideal temporary replacement or permanent substitute for conventional rubber V-Belt , Accu-Link belts combine superior strength, durability and quick easy assembly to keep equipment up and running at the same running horse power ratings as rubber belts.
+				br
+				span Accu-Link belt urethane construction offers superior resistance to most common industrial solvents and chemicals, oil, water and temperature extremes, from 40° F to 240° F. Accu-Link®  -belts dissipate heat so they run cooler than conventional belts.
+				br
+				span Suited to harsh environments,  Accu-Link  V-belts are ideal for the metal processing, machine tool, agricultural, packaging, coal and aggregate, pulp and paper, lumber, marine, air moving, petrochemical, woodworking, conveying and food industries.
+				br
+				span Ideal for Diverse Operating Environment.
+
+		+article()
+			h2.subtitle 제품 범위
+			div.text
+				span Accu-Link belts are available in Z/3L, A/4L, B/5L and C sections and all of them can fit on standard pulleys used for traditional V-belts with the corrisponding section.
+				br
+				span Designed to fit any drive application Accu-Link belts are available in the most popular sizes: Z/3L, A/4L, B/5L and C sections in both 25’ and 100’ lengths. We also offer CC section for dry can application. Shorter sleeved lengths are also available.
+				br
+				span Solve V-Belt Problems Quickly, Accurately & Permanently.
+

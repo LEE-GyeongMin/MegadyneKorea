@@ -49,17 +49,72 @@ body > .main
 		font-size: 1em
 		text-align: justify
 
+	a.imageLink
+		font-size: 0
+
 	ol,
 	ul
 		margin-bottom: 15px
 		padding: 0 0 0 2em
+
+		color: #333
+		font-size: 1em
+		line-height: 1.8em
+		text-align: justify
 	
 	ol
 		list-style-type: decimal
 		> li
 			margin-bottom: 10px
 	ul
-		list-style-type: disc 
+		list-style-type: disc
+
+	table.twoRows
+		td
+			width: 50%
+	
+	table.threeRows
+		td
+			width: (100 / 3) %
+
+	table.fiveRows
+		td
+			width: (100 / 5) %
+
+	.horizontalList
+		text-align: center
+		font-size: 0
+	.horizontalList > *
+		display: inline-block
+		position: relative
+
+	.horizontalList.twoRows > *
+		width: (100 / 2) %
+	.horizontalList.threeRows > *
+		width: (100 / 3) %
+	.horizontalList.fourRows > *
+		width: (100 / 4) %
+		
+	.horizontalList .label
+		position: absolute
+		width: 100%
+		height: 30px
+		bottom: 0px
+		
+		background-color: #2a2a2a
+
+		font-size: 15px
+		text-align: center
+
+		color: #ff2e2e
+
+		.verticalAligner
+			display: inline
+			width: 0px
+			height: 100%
+			margin-top: 2px
+			vertical-align: middle
+
 
 // Product Browser
 //=================================================
@@ -87,8 +142,6 @@ body > .main
 		.title,
 		.subtitle,
 		.text
-			line-height: 2em
-		.text *
 			line-height: 2em
 		.title
 			text-align: center
@@ -139,24 +192,13 @@ body > .main
 					width: 100%
 
 	.labelImageBox.twoRows
-		.label,
-		.image
-			width: 50%
-
 		.left > *
 			margin-left: 30%
 		.right > *
 			margin-right: 30%
-	
-	.labelImageBox.threeRows
-		.label,
-		.image
-			width: (100 / 3) %
 
 	.labelImageBox.fiveRows
-		.label,
-		.image
-			width: (100 / 5) %
+		td
 			padding: 5px
 		.label
 			height: 20px
@@ -166,7 +208,7 @@ body > .main
 	.textImageBar
 		display: block
 		position: relative
-		padding: 15px 0
+		padding: 15px 0px
 
 		table
 			width: 100%
@@ -210,29 +252,17 @@ body > .main
 
 		.image
 			width: 50%
-			padding: 10px 30px
 			img
 				width: 100%
 
-		.image.right
-			padding-right: 0
-		.image.left
-			padding-left: 0
-
-	.textImageBar.articleWidth
-		padding: 15px 100px
+		.right
+			padding-left: 20px
+		.left
+			padding-right: 20px
 
 	.textImageBar.smallImage
-		padding-top: 0
-		padding-bottom: 0
 		.image
 			width: 35%
-
-	.textImageBar.articleWidth.borderBottom
-		padding: 0 70px
-		table
-			padding: 20px 30px
-			border-bottom: 2px dashed #e50005
 
 // YouTube
 //=================================================
