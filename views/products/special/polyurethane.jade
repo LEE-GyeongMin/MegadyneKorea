@@ -1,0 +1,96 @@
+extends ../../layouts/main.jade
+
+mixin specialExecution(name, imgName)
+	div.textImageBar.smallImage
+		table
+			if (imgName)
+				td.image.left
+					img.boxShadow.border(src="/images/products/special/polyurethane/" + imgName)
+			td.textBox
+				div.label
+					span= name
+				block
+
+block title
+	title= title
+
+block links
+	+stylesheet("/stylesheets/main.css")
+
+block body
+	div.container
+		+banner("/images/products/special/polyurethane/header.jpg")
+
+		+article("폴리우레탄 벨트 주문제작")
+			p.text
+				span MEGADYNE은 사용자의 요청에 따른 주문제작을 하고 있습니다. 벨트 재질을 향상시키거나 특수한 업무에 적합하도록 변경할 수 있습니다.
+				br
+				span 고객사의 요청과 최소수량에 따라, MEGADYNE은 해당 벨트를 브랜드화 하고 해당 고객사의 브랜드 벨트임을 증명하는 특수 표식과 함께 패키지 할 수 있습니다.
+
+		+article
+			+specialExecution("두 줄의 코드(cord)")
+				p.text 모든 MEGAFLEX 제품들은 코드(cord)를 두 가닥으로 보강할 수 있습니다.
+
+			+specialExecution("두께와 뒷면 연마")
+				p.text
+					span 모든 폴리우레탄 벨트의 뒷면은 연마되었습니다. 벨트가 매우 정밀한 드라이브 시스템에 사용되는 경우 두께를 일정하게 유지하기 위해 더욱 세밀한 연마가 필요할 때가 있습니다.
+					br
+					span 해당 작업이 필요한 경우 톱니를 포함한 벨트 전체 두께가 지정되어야 합니다. 연마는 오차 ± 0.2mm 수준에서 마무리됩니다. (벨트의 두께는 크게 변하지 않습니다).
+					br
+					span 요청에 따라 더 두꺼운 벨트도 생산 가능합니다. 추가 두께는 대부분의 폭과 길이에서 가능합니다.
+
+			+specialExecution("특수 폴리우레탄", "special.jpg")
+				div.text MEGADYNE은 다양한 경도의 폴리우레탄을 제조할 수 있습니다:
+					ul
+						li 85 ShA(쇼어경도 타입 A)
+							ul.square
+								li 식품과 의료 제품과 접촉하는 경우
+						li 92 ShA(쇼어경도 타입 A)
+							ul.square
+								li 더 높은 온도 내성을 갖음
+								li 수성 페인팅 시스템을 위해 실리콘을 포함하지 않음
+						li 95 ShA(쇼어경도 타입 A)
+							ul.square
+								li 유리 강화
+						li 98 ShA(쇼어경도 타입 A)
+							ul.square
+								li 단단한 폴리우레탄
+						li 폴리우레탄 blue
+							ul.square
+								li 식품 접촉에 대한 안전성 인증(FCM)
+		
+			+specialExecution("색상", "colour.jpg")
+				div.text
+					span 폴리우레탄 벨트를 다양한 색상으로 제조할 수 있습니다.
+					br
+					span 성능은 흰색 폴리우레탄과 같습니다.
+			
+			+specialExecution("SPECIAL EXTRUSION", "extrusion.jpg")
+				p.text On customer request, Megadyne R&D department can develop special extruded belts by designing special mould. It is also possible to extrude standard belt with special cords position, ready for successive reworkings.
+			
+			
+			+specialExecution("BACK GRINDING", "grinding.jpg")
+				p.text
+					span A belt back can be ground to achieve a precise belt thickness as an adjunct to precision drives. When belt back grinding to a tolerance is required, the total thickness, including the tooth, must be specified. A grinding tolerance of +/– 0.2 mm is achievable with a level finish.
+					br
+					span (i.e. thickness will not vary greatly around the belt)
+					br
+					span Most widths and lengths are available.
+			
+			+specialExecution("LONGITUDINAL REWORK")
+				p.text Longitudinal rework along the belt back is possible on covered and uncovered belts. The profile can be machined precisely for required function. The measurement is given as the depth on the belt back. Most widths and lenghts are available.
+			
+			+specialExecution("REWORK ON BELT TEETH")
+				p.text
+					span The rework of the tooth profile can be very useful, i.e. improving the steering effect with guide rails.
+					br
+					span The rework dimension is given from the top of the tooth. Most belt widths and lengths are available.
+			
+			
+			+specialExecution("HOLES IN TIMING BELTS", "holes.jpg")
+				p.text Holes in timing belts can be for vacuum or air film conveying or as clearance for assembly mechanisms. Stops and cams can be attached through the holes. Customized tooling may be required depending on the layout and dimensions of holes required.
+			
+			+specialExecution("SINGLE TOOTH REMOVAL")
+				p.text Single and multiple tooth removal is available to your requirement, for applications in handling and conveying technology.
+
+

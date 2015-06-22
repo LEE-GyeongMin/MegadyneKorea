@@ -18,12 +18,14 @@ mixin MRProducts(name, imgName)
 
 block body
 	div.container
-		div.banner
-			img.boxShadow(src="/images/products/rubber/megaflat-rubber/header.jpg")
+		+banner("/images/products/rubber/megaflat-rubber/header.jpg")
 
 		+article("MEGAFLAT RUBBER")
-			p.text Megaflat are truly endless mandrel moulded chloroprene rubber belts, with either polyester, aramide or cotton reinforcements. Megaflat belts are particularly suitable for both power transmission and conveying.
-
+			p.text
+				span MEGAFLAT RUBBER는 이음매가 없도록 성형된 클로로프렌 고무 벨트입니다. 탄탄하게 직조된 폴리에스테르나 아라미드, 또는 면으로 보강됩니다.
+				br
+				span 동력전달과 컨베이어 작업 모두에 적합합니다.
+			
 		+article()
 			div.textImageBar.articleWidth
 				table
@@ -34,45 +36,45 @@ block body
 							span 구성요소
 						div.text
 							ol
-								li Belt body, made in black chloroprene to get the proper friction coefficients: it is rough on the transport side and smooth on the reverse side
-								li Fabric, in polyester; on T155 the fabric is made of aramid and polyester for a superior transmittable power.
+								li 벨트 몸체는 검은색 클로로프렌으로 만들어집니다. 전송면(transport side)는 거칠기 때문에 높은 마찰계수를, 반대편은 부드럽기 때문에 적은 마찰계수를 갖고 있습니다.
+								li 폴리에스테르 직물 입니다. T 155 모델의 경우 보다 높은 동력전달을 위해 아라미드와 폴리에스테르 혼합 직물을 사용합니다.
 
 		+article()
 			h2.subtitle 기계 - 화학적 성질 
 			ul.text
-				li Additional colours on demand
-				li Additional dimensions on demand
-				li Increase of thickness by about 0,3 - 0,5 mm for belts sides
-				li Standard sleeves are available 330 mm wide.
+				li 요구에 따른 색상 추가 가능
+				li 요구에 따른 치수 추가 가능
+				li 벨트 측면의 두께를 0.3 - 0.5㎜ 정도 늘릴 수 있음
+				li 표준폭 330mmm 슬리브로 제조됨
 				
 		+article()
 			h2.subtitle 제품 종류
-			p.text 모든 MEGAFLAT RUBBER 벨트는 이음매가 없도록 성형된 맨드릴 벨트 (endless mandrel moulded belt) 입니다.
+			p.text 모든 MEGAFLAT RUBBER 벨트는 이음매가 없도록 성형된 맨드릴 네오프렌 벨트 (endless mandrel moulded neopren belt) 입니다.
 		
 		+article()
 			+MRProducts("T 75", "t75.jpg")
 				p.text
-					span Truly endless mandrel moulded neoprene belt with Polyester fabric, particularly suitable for light-load transmission or conveying.
+					span T 75는 폴리에스테르 직물로 보강됩니다. 가벼운 무게의 동력전달이나 컨베이어에 적합합니다.
 					br
-					span Drivers for office automation.
+					span 사무 자동화 드라이버에 사용됩니다.
 			
 			+MRProducts("T 108", "t108.jpg")
 				p.text
-					span Truly endless mandrel moulded neoprene belt with Polyester and cotton fabric, particularly suitable for applications in office equipment.
+					span T 108은 폴리에스테르와 면 직물로 보강됩니다. 사무실 장비에 적합합니다.
 	
 			+MRProducts("T 110", "t110.jpg")
 				p.text
-					span Truly endless mandrel moulded neoprene belt with Polyester fabric, caracterised by good running conditions and particularly suitable for universal  applications and textile machines.
+					span T 110은 폴리에스테르 직물로 보강됩니다. 주행 성능이 좋아 범용적으로 사용되는데, 특히 섬유 기계에서 적합합니다.
 	
 			+MRProducts("T 120", "t120.jpg")
 				p.text
-					span Truly endless mandrel moulded neoprene belt with polyester fabric, particularly suitable for heavy-duty drives for wood or metal working.
+					span T 120은 폴리에스테르 직물로 보강됩니다. 목재나 철을 다루는 무거운 드라이브 시스템에 적합합니다.
 	
 			+MRProducts("T 155", "t155.jpg")
 				p.text
-					span Truly endless mandrel moulded neoprene belt with polyester and aramid fabric, suitable for low stretch demanding drive conditions.
+					span T 155는 폴리에스테르와 아라미드 혼합 직물로 보강됩니다. 적은 신장률이 필요한 드라이브 작업에 적합합니다.
 	
 			+MRProducts("T 200", "t200.jpg")
 				p.text
-					span Truly endless mandrel moulded neoprene belt with polyester fabric, suitable for high torque, high speed drives such as machine tools.
+					span T 200은 폴리에스테르 직물로 보강됩니다. 공작기계 처럼 높은 토크, 높은 속도에서 동작하는 드라이브에 적합합니다.
 

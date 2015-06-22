@@ -7,7 +7,7 @@ block links
 	+stylesheet("/stylesheets/main.css")
 
 mixin pvApplication(name, imgName)
-	div.textImageBar.articleWidth
+	div.textImageBar
 		table
 			td.image.left
 				img.boxShadow.border(src="/images/products/rubber/pv-ribbed/" + imgName)
@@ -18,11 +18,15 @@ mixin pvApplication(name, imgName)
 
 block body
 	div.container
-		div.banner
-			img.boxShadow(src="/images/products/rubber/pv-ribbed/header.jpg")
+		+banner("/images/products/rubber/pv-ribbed/header.jpg")
 
 		+article("PV RIBBED 벨트")
-			p.text Megadyne ribbed belts are endless rubber belts with longitudinal V shaped grooves. PV belts provide high flexibility and great power performance as they combine the benefits of flat and V belts.
+			p.text
+				span MEGADYNE Ribbed(뼈대 있는) 벨트는 세로 방향으로 V 모양의 홈이 있는 엔들리스 고무 벨트 입니다.
+				br
+				span PV 벨트는 높은 유연성과 높은 동력전달성능을 갖고 있습니다.
+				br
+				span 이 둘이 조합된 PV Ribbed 벨트는 평벨트와 V-벨트의 장점을 모두 갖고 있습니다.
 
 		+article()
 			div.textImageBar
@@ -34,74 +38,73 @@ block body
 							span 구성요소
 						div.text
 							ul
-								li The belt body made of a special rubber compound which provides, due to its excellent mechanical characteristics, high trasmission efficiency and assures a minimum rubber wear off
-								li Tensile member consisting in high-strength lowstretch cords, which grant length stability over the belt life time.
-								li Fabric jacket or cover made of fabric, protecting the tensile.
+								li 벨트의 몸체는 특수한 고무 화합물로 구성되어 고효율의 동력전달과 우수한 내마모성을 두루 갖추었습니다.
+								li 벨트의 인장은 고장력 - 적은 신장률을 갖춘 코드(cord)로 되어있습니다. 이 덕분에 벨트의 수명이 다 할 때까지도 늘어지지 않습니다.
+								li 벨트의 뒷면에는 인장을 보하기 위해 직물 재킷 또는 직물 덮개가 있습니다.
 
 		+article()
 			h2.subtitle 기계 - 화학적 성질 
 			ul.text
-				li eliminates belt matching
-				li permits drive design to meet exact power or space requirements
-				li distributes the drive load across the entire belt width
-				li permits cooler running and high drive efficiency
-				li excels on small pulleys at high speeds
-				li compact smooth running drive system with low vibration
-				li linear belt speeds up to 60 m/s are possible
-				li high transmission ratio
-				li resistance to temperatures from –30 to +80 ºC
-				li power performance can be improved by increasing the number of ribs
-				li antistatic properties according to ISO 1813.
+				li 벨트 매칭(matching)을 없앰
+				li 힘이나 공간을 정확하게 맞춰야 하는 드라이브 디자인에 적용 가능
+				li 전체 벨트 폭에 걸쳐 구동부하를 분산
+				li 쿨러 구동 가능
+				li 고효율
+				li 고속으로 운행되는 작은 풀리에 탁월함
+				li 저진동 - 부드러운 컴팩트 드라이브 시스템
+				li 최대 선속도 60m/s
+				li 높은 변속비
+				li 작동 온도 –30℃ / +80℃
+				li 뼈대의 갯수를 늘려 동력 전달량을 늘릴 수 있음
+				li ISO 1813 에 따른 대전 방지
 				
 		+article()
 			h2.subtitle 벨트 종류와 응용분야
 			p.text
-				span High performance PV-ribbed belts are produced in H, J, L and m profiles (K on request).
+				span 고성능의 PV Ribbed 벨트는 피치와 벨트 두께에 따라 H, J, L, M 로 나뉩니다 (K는 요청 시 제공합니다).
 				br
-				span PV-ribbed belts are also available in elastic version (tem) and they are suitable in the transmission where fixed centre distance is required.
-				br
-				span The tem belt is developed according to customer requirements.
+				span 사용자가 요청할 경우 중심거리 고정 드라이브에 적합한 TEM(탄성력 있는) 벨트도 제공합니다.
 				br
 				br
 				span 우수한 특성 덕분에 PV RIBBED 벨트는 다음과 같이 많은 분야에서 성공적으로 사용됩니다:
 		
 		+article()
-			+pvApplication("P H", "h.jpg")
-				ul.text
-					li Household appliances
-					li Dryers
-					li Washing machines
+			+pvApplication("H", "h.jpg")
+				ul
+					li 가전 ​​제품
+					li 건조기
+					li 세탁기
 			
-			+pvApplication("P J", "j.jpg")
-				ul.text
-					li Automatic doors
-					li Fitness equipment
-					li Laundry machines
-					li Concrete mixers
-					li Floor care equipment
-					li Compressors
-					li Lift appliances etc...
+			+pvApplication("J", "j.jpg")
+				ul
+					li 자동문
+					li 피트니스 장비
+					li 세탁기
+					li 콘크리트 혼합기
+					li 바닥관리(Floor care) 장비
+					li 압축기
+					li 리프트 제품
 	
-			+pvApplication("P K", "k.jpg")
-				ul.text
-					li Tractors
-					li Fans
-					li Pumps & compressors
-					li Wood industry
+			+pvApplication("K", "k.jpg")
+				ul
+					li 트랙터
+					li 팬
+					li 펌프 및 압축기
+					li 목재 산업
 	
-			+pvApplication("P L", "l.jpg")
-				ul.text
-					li High pressure cleaners
-					li Flour mills
-					li Crushers
-					li Escalators
-					li Construction industy
+			+pvApplication("L", "l.jpg")
+				ul
+					li 고압 청소기
+					li 밀가루 공장
+					li 분쇄기
+					li 에스컬레이터
+					li 건설 산업
 	
-			+pvApplication("P M", "m.jpg")
-				ul.text
-					li Paper industry
-					li Hammer mills
-					li Turbines
-					li Quarries
-					li Excavators, etc...
+			+pvApplication("M", "m.jpg")
+				ul
+					li 제지 
+					li 해머 
+					li 터빈
+					li 채석장
+					li 굴삭기
 

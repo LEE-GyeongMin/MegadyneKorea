@@ -8,37 +8,45 @@ block links
 
 block body
 	div.container
-		div.banner
-			img.boxShadow(src="/images/products/other/megablue/header.jpg")
+		+banner("/images/products/other/megablue/header.jpg")
 
 		+article("MEGABLUE")
 			.text
-				span MegaBlue is Megadyne’s product, specifically created to give a good alternative to the classical plastic modular belt for the food processing industry. This product, with its smooth surface, guarantees superior hygiene levels and, at the same time, works like a positive drive modular plastic belt. Thanks to the tooth shape and pitch, MegaBlue works with the same sprockets of modular plastic belts and is a good alternative where an extreme cleanability is needed. This belt helps saving water and time usually dedicated to the cleansing of a classical modular plastic belt.
+				span MEGABLUE는 식품 제조산업에서 자주 사용되는 플라스틱 모듈형 벨트를 대체하기 위해 만들어졌습니다. MEGABLUE는 기존의 컨베이어 시스템과 플라스틱 모듈 벨트의 장점을 이상적으로 조합한 제품으로, 부드러운 표면을 갖고 있으면서도 높은 위생상태를 유지할 수 있으며 기존의 플라스틱 모듈형 벨트처럼 동작합니다. 
 				br
-				span All MegaBlue product line is FDA/USDA/USDA Dairy Approved. It’s the ideal combination of the benefits of a classical smooth conveyor with the mechanical and chemical advantages of a plastic modular belt.
+				span 톱니 모양과 피치(pitch)가 같기 때문에 MEGABLUE는 기존의 스프로켓(sprocket)에서 바로 동작합니다. 그러면서 기존 제품보다 깨끗한 환경을 유지할 수 있습니다. 이 덕분에 극한의 청결이 요구되는 곳에서 좋은 대안이 될 수 있습니다.
+				br
+				span 기존의 플라스틱 모듈 벨트와 비교했을 때 청소 시간과 청소에 사용되는 물을 절약할 수 있습니다.
+				br
+				br
+				span  모든 MEGABLUE 제품은 FDA, USDA, USDA 유제품 인증을 받았습니다.
+
 
 		+article()
-			h2.subtitle Main Features
-			p.text Suitable to replace most of the 1” and 2” plastic modular belts
+			h2.subtitle 주요 특징
+			p.text 대부분의 1 ~ 2 인치의 플라스틱 모듈형 벨트를 대체할 수 있습니다.
 			ul
-				li Available with Kevlar® tension member where the application requires high tensile strength and low elongation
-				li Blue FDA approved Polyurethane water and chemical resistant
-				li Perfectly sealed edges to avoid the contact of external agents with Kevlar® cords in case they are present  (for MB10 K)
-				li Flat and smooth back surface to help the clean-in-place process and to avoid bacteria deposit
-				li FDA / USDA approved for humid food contact and transportation (meat and poultry)
+				li 높은 장력이 걸리거나 적은 신장률이 요구되는 경우, 보강재를 케블라(Kevlar) 인장으로 대체할 수 있습니다.
+				li MEGABLUE에 사용되는 폴리우레탄은 FDA로 부터 내수성과 화학물질 저항성을 인증받았습니다.
+				li 가장자리 부분은 완벽하게 감싸져 케블라 코드(Kevlar cord)가 외부 에이전트(agent)와 접촉하는 것을 방지합니다 (MB10 K의 경우).
+				li 평평하고 부드러운 뒷면은 청소 및 정비 과정을 용이하게 해주고 박테리아의 번식을 막습니다.
+				li FDA와 USDA로 부터 습윤 식품(육류와 가금류)의 접촉과 운송에 대한 인증을 받았습니다.
 		
 		+article()
-			h2.subtitle Elongation
+			h2.subtitle 신장률 그래프
 			img(src="/images/products/other/megablue/elongation-graph.jpg")
 				
 		+article()
 			h2.subtitle MEGABLUE 응용분야
-			p.text Megadyne’s MegaBlue product line was conceived keeping in mind the specific requirements of the food processing industry in a wide variety of sectors such as but not limited to:
+			p.text
+				span MEGABLUE는 아래 나열된 식품 제조산업의 특수한 요구사항들을 고려하여 개발되었습니다.
+				br
+				span 그러나 용도가 제한된 것은 아니기 때문에 다른 식품산업에서도 사용 가능합니다:
 			ul
-				li BAKERY
-				li MEAT,POULTRY AND SEAFOOD
-				li BEVERAGE
-				li FRUIT AND VEGETABLE
+				li 제빵
+				li 육류, 가금류, 해산물
+				li 음료
+				li 과일과 채소
 
 			div.horizontalList.fourRows
 				img(src="/images/products/other/megablue/application01.jpg")
@@ -48,53 +56,50 @@ block body
 			img(src="/images/products/other/megablue/application.jpg")
 		
 		
-		+article()
-			h2.subtitle FASTENING OPTIONS
-
+		+article("결합부 옵션")
 			div.textImageBar
 				table
 					td.image.left
 						img.boxShadow(src="/images/products/other/megablue/joint.jpg")
 					td.textBox
 						div.label
-							span Finger joint factory welding
+							span 핑거 조인트 (접합되어 출하)
 						div.text
-							span The belt will be supplied already spliced, this means the customer has to be able to dismantle the machinery to mount the belt.
+							span 핑거 조인트 벨트는 엔들리스(endless) 벨트처럼 접합된 상태로 출하됩니다. 따라서 해당 벨트를 기계에 장착하기 위해서는 기계를 분해하여야 합니다.
 							br
-							span Note: This is the safest method to supply the belt in terms of its cleanability, the homogenuity of the surface and resistance to aggressive bacteria. The finger spliced belt looks exactly like an endless belt.
+							span 주: 대신 벨트 전체가 균일합니다. 접합부 까지 말이죠. 이 덕분에 핑거 조인트 벨트는 박테리아 증식에 취약한 부분이 없습니다. 따라서 핑거 조인트 벨트는 청결 유지에 가장 적합한 방법입니다. 
 
 			div.textImageBar
 				table
 					td.textBox
 						div.label
-							span Finger joint factory welding
+							span 플리스틱 리벳(rivet)과 금속 스테이플(staple)
 						div.text
-							span The Plastic rivet joint is ideal in those application where the belt needs to be constantly assembled and disassembled to be cleaned and rinsed. The rivet’s FDA-approved material guarantees maximum safety when in contact with the food.
+							span 플라스틱 리벳 조인트는 청소를 위해 끊임없이 조립과 분해를 반복해야 하는 경우에 적합합니다. MEGABLUE의 리벳은 FDA로 부터 식품 접촉 부분에서 최고 등급의 안전성을 인증받았습니다.
 							br
-							span The belt will be supplied with  FDA approved material Blue plastic rivets or stainless steel staples already mounted on the edges. Once the belt has been placed  on the machine, the customer will join the edges using the appropriate hinge that is provided with the belt. 
+							span 이 옵션을 선택한 경우 FDA 승인을 받은 파란색 플라스틱 리벳 또는 스테인리스 스틸 스테이플이 장착된 벨트가 제공됩니다. 사용자는 벨트를 기계에 알맞게 위치한 후 함께 제공되는 힌지(hinge) 중심축을 삽입하는 것으로 벨트를 결합합니다.
+ 
 					td.image.right
 						img.boxShadow(src="/images/products/other/megablue/rivet.jpg")
 			
 			table.labelImageBox.twoRows
 				tr
 					td.image
-						.boxShadow
-							img(src="/images/products/other/megablue/rivet01.jpg")
+						img.boxShadow(src="/images/products/other/megablue/rivet01.jpg")
 					td.image
-						.boxShadow
-							img(src="/images/products/other/megablue/rivet02.jpg")
+						img.boxShadow(src="/images/products/other/megablue/rivet02.jpg")
 				tr
-					td.label.large
-						span.text Plastic
-					td.label.large
-						span.text Stainless Steel
+					td.label
+						span.subtitle 플라스틱
+					td.label
+						span.subtitle 스테인리스 스틸
 
 		+article()
-			h2.subtitle PLASTIC RIVETS SPLICING PROCEDURE
+			h2.subtitle 플라스틱 리벳 접합 절차
 			ol
-				li Place the belt on the conveyor
-				li Match the edges until the grooves are aligned.
-				li Insert the hinge material
-				li Provide a 90° bend to the free edges of the hinge material while applying a little heat at the bend point with a lighter.
+				li 벨트를 컨베이어 위에 위치시킵니니다
+				li 홈이 정렬될 때까지 가장자리를 맞춥니다
+				li 힌지 중심축을 삽입합니다
+				li 접합부를 라이터를 이용하여 가열하면서 직각으로 굽힙니다.
 
 

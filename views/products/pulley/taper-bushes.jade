@@ -8,8 +8,7 @@ block links
 
 block body
 	div.container
-		div.banner
-			img.boxShadow(src="/images/products/pulley/taper-bushes/header.jpg")
+		+banner("/images/products/pulley/taper-bushes/header.jpg")
 
 		+article("테이퍼 부쉬")
 
@@ -17,8 +16,11 @@ block body
 			div.textImageBar
 				table
 					td.textBox
-						div.text
-							p The taper bushes allow easy mountig and quick removal of the transmission,thus eliminatig the clearance between shaft and hole. Megadyne able to provide a range of different types of taper bushes, each with a wide range of bore diameters and different types of keyway.
+						p.text
+							span 테이퍼 부쉬는 축과의 간격을 조절할 수 있도록 해주는 부품입니다. 테이퍼 부쉬를 이용하면 동력을 손쉽게 제어 (마운트 또는 제거) 할 수 있습니다.
+							br
+							span MEGADYNE은 보어(bore) 직경과 키 홈(keyway)의 종류에 따라 다양한 테이퍼 부쉬를 제공하고 있습니다.
+
 					td.image.right
 						img.boxShadow.border(src="/images/products/pulley/taper-bushes/info.jpg")
 

@@ -10,7 +10,7 @@ mixin banner(imgSrc)
 
 mixin article(title)
 	div.article
-		h2.title= title
+		h1.title= title
 		block
 
 doctype html
@@ -19,6 +19,7 @@ html
 		base(href="/")
 		meta(charset="UTF-8")
 		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="format-detection", content="telephone=no")
 		block title
 			title Megadyne Korea
 		+stylesheet("/stylesheets/layout.css")
