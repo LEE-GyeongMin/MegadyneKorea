@@ -56,6 +56,7 @@ var nib = require('nib');
 var index = require(getController('index'));
 var about = require(getController('about'));
 var products = require(getController('products'));
+var catalogs = require(getController('catalogs'));
 
 // SETUPS
 //===================================================
@@ -87,6 +88,7 @@ app.use(express.static(getDirectory('public')));
 app.use('/', index);
 app.use('/about', about);
 app.use('/products', products);
+app.use('/catalogs', catalogs);
 
 // REQUESTS WITH NO HANDLER
 app.use(function(req, res, next) {

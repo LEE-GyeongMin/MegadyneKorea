@@ -1,0 +1,135 @@
+extends ./layouts/main.jade
+
+mixin LibImage(imgSrc, name)
+	td.image
+		a(href="/catalogs/" + name + ".pdf", target="_blank")
+			img.border(src = "/images/catalogs/" + imgSrc)
+
+mixin LibLabel(text, name)
+	td.label
+		a(href="/catalogs/" + name + ".pdf", target="_blank")= text
+
+block title
+	title= title
+
+block links
+	+stylesheet("/stylesheets/main.css")
+
+block body
+	div.container
+		+banner("/images/catalogs/header.jpg")
+
+		+article("카탈로그")
+			p.text
+				span 고객 여러분의 편의를 위해 MEGADYNE에서는 PDF 형식의 카탈로그를 제공하고 있습니다.
+				br
+				span E-메일을 통해 하드 카피를 받고 싶으신 경우, 전화나 이메일로 연락바랍니다.
+		
+		+article()
+			h2.subtitle 공통
+			table.labelImageBox.fiveRows
+				tr
+					+LibImage("products-leaflet.jpg", "MEGADYNE-Leaflet")
+					+LibImage("products-guide.jpg", "Products-Guide")
+				tr
+					+LibLabel("MEGADYNE 리플렛", "MEGADYNE-Leaflet")
+					+LibLabel("제품 안내서", "Products-Guide")
+					+LibLabel("")
+					+LibLabel("")
+					+LibLabel("")
+		
+		+article()
+			h2.subtitle 폴리우레탄 벨트
+			table.labelImageBox.fiveRows
+				tr
+					+LibImage("megaflex.jpg", "MEGAFLEX")
+					+LibImage("megaflat.png", "MEGAFLAT")
+					+LibImage("megalinear.jpg", "MEGALINEAR")
+					+LibImage("megapower.jpg", "MEGAPOWER")
+					+LibImage("pv-belts.jpg", "PV-Belts")
+				tr
+					+LibLabel("MEGAFLEX", "MEGAFLEX")
+					+LibLabel("MEGAFLAT", "MEGAFLAT")
+					+LibLabel("MEGALINEAR", "MEGALINEAR")
+					+LibLabel("MEGAPOWER", "MEGAPOWER")
+					+LibLabel("MEGARIB (PV 벨트)", "PV-Belts")
+
+		+article()
+			h2.subtitle 고무 벨트
+			table.labelImageBox.fiveRows
+				tr
+					+LibImage("pv-belts.jpg", "PV-Belts")
+					+LibImage("megaflat.png", "MEGAFLAT")
+				tr
+					+LibLabel("PV RIBBED 벨트", "PV-Belts")
+					+LibLabel("MEGAFLAT RUBBER", "MEGAFLAT")
+					+LibLabel("")
+					+LibLabel("")
+					+LibLabel("")
+			ul.colorRed
+				li
+					span V-벨트
+					table.labelImageBox.fiveRows
+						tr
+							+LibImage("v-belts.jpg", "V-Belts")
+							+LibImage("oleostatic-gold.jpg", "OLEOSTATIC-Gold")
+							+LibImage("linea-gold.jpg", "LINEA-Gold")
+						tr
+							+LibLabel("V-벨트", "V-Belts")
+							+LibLabel("OLEOSTATIC GOLD", "OLEOSTATIC-Gold")
+							+LibLabel("LINEA GOLD", "LINEA-Gold")
+							+LibLabel("")
+							+LibLabel("")
+				li
+					span SYNCHRONOUS 벨트
+					table.labelImageBox.fiveRows
+						tr
+							+LibImage("isoran-synchronous.jpg", "Isoran-Synchronous-Belts")
+							+LibImage("platinum.jpg", "Platinum")
+							+LibImage("open-end-synchronous.jpg", "Open-End-Synchronous-Belts")
+							+LibImage("rpp-megapaint.jpg", "RPP-MEGAPAINT")
+						tr
+							+LibLabel("ISORAN SYNCHRONOUS", "Isoran-Synchronous-Belts")
+							+LibLabel("PLATINUM", "Platinum")
+							+LibLabel("OPEN-END SYNCRHONOUS", "Open-End-Synchronous-Belts")
+							+LibLabel("RPP MEGAPAINT", "RPP-MEGAPAINT")
+							+LibLabel("")
+
+		+article()
+			h2.subtitle 풀리
+			table.labelImageBox.fiveRows
+				tr
+					+LibImage("megapulley.jpg", "MEGAPULLEY")
+				tr
+					+LibLabel("MEGADYNE 풀리", "MEGAPULLEY")
+					+LibLabel("")
+					+LibLabel("")
+					+LibLabel("")
+					+LibLabel("")
+
+		+article()
+			h2.subtitle 기타 제품
+			table.labelImageBox.fiveRows
+				tr
+					+LibImage("conveyor.jpg", "Conveyor-Belts")
+					+LibImage("megablue.jpg", "MEGABLUE")
+					+LibImage("accu-link.jpg", "ACCU-LINK")
+				tr
+					+LibLabel("컨베이어 벨트", "Conveyor-Belts")
+					+LibLabel("MEGABLUE", "MEGABLUE")
+					+LibLabel("ACCU-LINK", "ACCU-LINK")
+					+LibLabel("")
+					+LibLabel("")
+
+		+article()
+			h2.subtitle 특수 벨트
+			table.labelImageBox.fiveRows
+				tr
+					+LibImage("specialty-belting.jpg", "Specialty-Belting")
+					+LibImage("cover-properties.jpg", "Cover-Properties")
+				tr
+					+LibLabel("Specialty Belting", "Specialty-Belting")
+					+LibLabel("특수 코팅", "Cover-Properties")
+					+LibLabel("")
+					+LibLabel("")
+					+LibLabel("")

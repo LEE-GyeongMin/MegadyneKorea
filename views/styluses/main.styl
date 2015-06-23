@@ -65,6 +65,10 @@ body > .main
 		ul
 			margin-bottom: 10px
 	
+	ol table,
+	ul table
+		line-height: normal
+	
 	ol
 		list-style-type: decimal
 		> li
@@ -117,7 +121,9 @@ body > .main
 			height: 100%
 			margin-top: 3px
 			vertical-align: middle
-
+	
+	.colorRed
+		color: #ef0005
 
 // Product Browser
 //=================================================
@@ -172,6 +178,11 @@ body > .main
 			height: 20px
 			font-size: 16px
 			color: #e50005
+			a
+				color: #ef0005
+				text-decoration: none
+			a:hover
+				text-decoration: underline
 			img
 				margin-left: -22px
 				padding-right: 7px
@@ -183,7 +194,8 @@ body > .main
 			font-size: 0
 			box-sizing: border-box
 		
-		.image > img
+		.image > img,
+		.image a > img
 			width: 100%
 
 	.labelImageBox.twoRows td
