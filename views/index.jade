@@ -1,5 +1,16 @@
 extends ./layouts/main.jade
 
+mixin LibImage(imgSrc, link)
+	td.image
+		a(href=link)
+			img.boxShadow.border(src=imgSrc)
+
+mixin LibLabel(icon, label, link)
+	td.label.withIcon
+		a.subtitle(href=link)
+			img(src="/images/" + icon)
+			span= label
+
 block links
 	+stylesheet("/stylesheets/main.css")
 
@@ -10,26 +21,15 @@ block body
 		+article("MEGADYNE")
 			p.text MEGADYNE은 유럽과 북미, 아시아 등지에 생산공장을 보유하고 있는 부품 제조사이자 글로벌 유통업체 입니다. 다양한 산업군에서 요구하는 특수한 제품들을 폭넓게 제공하기 위해 끊임없이 제조와 개발을 하고 있습니다.
 
-		div.sliderContainer
-			div.positioner.boxShadow
-				div.slider
-					a.content(href="/products/other")
-						img(src="/images/products/other/header.jpg")
-					a.content(href="/products/special")
-						img(src="/images/products/special/header.jpg")
-					a.content(href="/products/polyurethane")
-						img(src="/images/products/polyurethane/header.jpg")
-					a.content(href="/products/rubber")
-						img(src="/images/products/rubber/header.png")
-			div.sliderCtrl
-				a.toLeft
-				a.toRight
+		
+		table.labelImageBox.threeRows
+			tr
+				+LibLabel("philosophy-icon.png", "MEGADYNE 소개", "/about")
+				+LibLabel("pulley-icon.png", "제품", "/products")
+				+LibLabel("mission-icon.png", "카탈로그", "/catalogs")
+			tr
+				+LibImage("/images/about.jpg", "/about")
+				+LibImage("/images/products.jpg", "/products")
+				+LibImage("/images/catalogs.jpg", "/catalogs")
 
-block scripts
-	+script("/javascripts/util.js")
-	|<!--[if lte IE 9]>
-	+script("/javascripts/index.ie9.js")
-	|<![endif]-->
-	|<!--[if !IE ]><!-->
-	+script("/javascripts/index.js")
-	|<!--<![endif]-->
+
