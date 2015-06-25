@@ -14,4 +14,4 @@ do-not-track/
 .settings/
 
 # pdf
-catalogs/
+public/catalogs/
