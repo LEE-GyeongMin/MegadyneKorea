@@ -62,7 +62,6 @@ var catalogs = require(getController('catalogs'));
 //===================================================
 var app = express();
 
-
 //app.enable('case sensitive routing');
 app.set('view engine', 'jade');
 app.set('views', getDirectory('jades'));
@@ -82,7 +81,9 @@ app.use(stylus.middleware({
 	compile: compileStylus
 }));
 
-app.use(express.static(getDirectory('public')));
+app.use(express.static(getDirectory('public'), {
+	maxAge: 864000000
+}));
 
 // URL - CONTROLLER MAPPING
 app.use('/', index);
