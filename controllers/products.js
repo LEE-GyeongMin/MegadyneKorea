@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 
-var titleSuffix = 'Megadyne Korea';
+var titleSuffix = '(주)티비에스';
 
 var kinds = {
 	'polyurethane': '폴리우레탄 벨트',
@@ -50,7 +50,7 @@ var pages = {
 router.get('/', function(req, res, next) {
 	var pageScope = {
 		baseUrl: req.baseUrl,
-		title: titleSuffix + ' - 제품'
+		title: titleSuffix + ' - 메가다인 제품'
 	};
 
 	res.render('products', pageScope);

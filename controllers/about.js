@@ -4,7 +4,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
 	var pageScope = {
 		baseUrl: req.baseUrl,
-		title: "Megadyne Korea - 소개"
+		title: "(주)티비에스 - 소개"
 	};
 
 	res.render('about', pageScope);
