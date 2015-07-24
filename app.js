@@ -68,9 +68,10 @@ var app = express();
 var logDir = 'logs/';
 fs.existsSync(logDir) || fs.mkdirSync(logDir);
 var logStream = FileStreamRotator.getStream({
-	filename: path.join(logDir, 'access.log'),
+	filename: logDir + '/access-%DATE%.log',
 	frequency: 'daily',
-	verbose: false
+	verbose: false,
+	date_format: "YYYY-MM-DD"
 });
 
 //app.enable('case sensitive routing');
