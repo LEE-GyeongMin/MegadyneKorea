@@ -44,13 +44,16 @@ var fs = require('fs');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
-var logger = require('morgan');
+var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 // Stylus & Nib
 var stylus = require('stylus');
 var nib = require('nib');
+
+// for morgan
+var FileStreamRotator = require('file-stream-rotator');
 
 // CONTROLLERS
 var index = require(getController('index'));
@@ -61,7 +64,14 @@ var catalogs = require(getController('catalogs'));
 // SETUPS
 //===================================================
 var app = express();
-var logStream = fs.createWriteStream('logs/access.log', {flags: 'a'});
+
+var logDir = 'logs/';
+fs.existsSync(logDir) || fs.mkdirSync(logDir);
+var logStream = FileStreamRotator.getStream({
+	filename: path.join(logDir, 'access.log'),
+	frequency: 'daily',
+	verbose: false
+});
 
 //app.enable('case sensitive routing');
 app.set('view engine', 'jade');
@@ -71,7 +81,16 @@ app.locals.pretty = true;
 // MIDDLEWARES
 //===================================================
 app.use(favicon(getDirectory('public/favicon.ico')));
-app.use(logger('combined', {stream: logStream}));
+app.use(morgan('[:date[iso]] :method :status :url :remote-addr', {
+	skip: function(req, res) {
+		var isSkip = 
+				req.url.search('/images') *
+				req.url.search('/stylesheets') *
+				req.url.search('/fonts');
+		return !isSkip;
+	},
+	stream: logStream
+}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
