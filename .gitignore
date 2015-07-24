@@ -15,3 +15,7 @@ do-not-track/
 
 # pdf
 public/catalogs/
+
+# log files
+logs/
+

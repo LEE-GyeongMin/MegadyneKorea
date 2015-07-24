@@ -61,6 +61,7 @@ var catalogs = require(getController('catalogs'));
 // SETUPS
 //===================================================
 var app = express();
+var logStream = fs.createWriteStream('logs/access.log', {flags: 'a'});
 
 //app.enable('case sensitive routing');
 app.set('view engine', 'jade');
@@ -70,7 +71,7 @@ app.locals.pretty = true;
 // MIDDLEWARES
 //===================================================
 app.use(favicon(getDirectory('public/favicon.ico')));
-app.use(logger('dev'));
+app.use(logger('combined', {stream: logStream}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
