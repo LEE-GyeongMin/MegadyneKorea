@@ -82,7 +82,7 @@ app.locals.pretty = true;
 // MIDDLEWARES
 //===================================================
 app.use(favicon(getDirectory('public/favicon.ico')));
-app.use(morgan('[:date[iso]] :method :status :remote-addr\t:url', {
+app.use(morgan('[:date[iso]] :method :status :remote-addr :url', {
 	skip: function(req, res) {
 		var isSkip = 
 				req.url.search('/images') *
