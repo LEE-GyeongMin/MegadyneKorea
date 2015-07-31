@@ -113,14 +113,17 @@ app.get('/*', function(req, res, next) {
 	next();
 });
 
-app.get('/catalogs/:filename', function(req, res, next) {
-	res.setHeader('Content-Type', 'application/octet-stream');
+app.get('/catalogs/:pdf', function(req, res, next) {
+	if (fs.existsSync('public/catalogs/' + req.params.pdf)) {
+		res.setHeader('Content-Type', 'application/octet-stream');
+	}
 	next();
 });
 
 app.use(express.static(getDirectory('public'), {
 	dotfile: 'deny',
-	index: false
+	index: false,
+	maxAge: 864000
 }));
 
 // URL - CONTROLLER MAPPING
