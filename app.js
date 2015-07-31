@@ -113,6 +113,11 @@ app.get('/*', function(req, res, next) {
 	next();
 });
 
+app.get('/catalogs/:filename', function(req, res, next) {
+	res.setHeader('Content-Type', 'application/octet-stream');
+	next();
+});
+
 app.use(express.static(getDirectory('public'), {
 	dotfile: 'deny',
 	index: false
