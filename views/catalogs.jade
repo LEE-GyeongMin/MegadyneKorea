@@ -2,12 +2,12 @@ extends ./layouts/main.jade
 
 mixin LibImage(imgSrc, name)
 	td.image
-		a(href="/catalogs/" + name + ".pdf", target="_blank")
+		a(href="/catalogs/" + name + ".pdf", download)
 			img.border(src = "/images/catalogs/" + imgSrc)
 
 mixin LibLabel(text, name)
 	td.label
-		a(href="/catalogs/" + name + ".pdf", target="_blank")= text
+		a(href="/catalogs/" + name + ".pdf", download)= text
 
 block title
 	title= title
