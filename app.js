@@ -54,6 +54,7 @@ var nib = require('nib');
 
 // for morgan
 var FileStreamRotator = require('file-stream-rotator');
+var filesize = require('filesize');
 
 // CONTROLLERS
 var index = require(getController('index'));
@@ -74,6 +75,11 @@ var logStream = FileStreamRotator.getStream({
 	date_format: "YYYY-MM-DD"
 });
 
+morgan.token('filesize', function(req, res) {
+	var fsize = res._headers['content-length'];
+	return (isNaN(fsize) ? '-' : filesize(fsize, { base: 10 }));
+});
+
 //app.enable('case sensitive routing');
 app.set('view engine', 'jade');
 app.set('views', getDirectory('jades'));
@@ -82,7 +88,7 @@ app.locals.pretty = true;
 // MIDDLEWARES
 //===================================================
 app.use(favicon(getDirectory('public/favicon.ico')));
-app.use(morgan('[:date[iso]] :method :status :remote-addr :url', {
+app.use(morgan('[:date[iso]] :method :status :remote-addr :url :filesize', {
 	skip: function(req, res) {
 		var isSkip = 
 				req.url.search('/images') *
@@ -102,8 +108,14 @@ app.use(stylus.middleware({
 	compile: compileStylus
 }));
 
+app.get('/*', function(req, res, next) {
+	res.setHeader('Cache-Control', 'max-age=864000');
+	next();
+});
+
 app.use(express.static(getDirectory('public'), {
-	maxAge: 864000000
+	dotfile: 'deny',
+	index: false
 }));
 
 // URL - CONTROLLER MAPPING
