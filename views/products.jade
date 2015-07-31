@@ -1,20 +1,5 @@
 extends ./layouts/main.jade
 
-mixin subPageBar(title, link, icon, thumbnail)
-	div.textImageBar
-		table
-			td.textBox
-				div.label.withIcon
-					img(src=icon)
-					span= title
-				block
-				a.learnMore(href=link)
-					span.text 더 자세히 알아보기
-					span.icon >
-			td.image.right
-				a(href=link)
-					img.boxShadow.border(src=thumbnail)
-
 block title
 	title= title
 
@@ -41,7 +26,7 @@ block body
 							br
 							span 특별주문을 통해 내부 코드(cord)의 재질을 강철에서 케블라(Kevlar)로 바꿀 수 있습니다.
 	
-					td.image
+					td.image.boxShadow
 						div.horizontalList.twoRows
 							a.imageLink(href="/products/polyurethane/megaflex")
 								img(src="/images/products/polyurethane/megaflex.jpg")
@@ -73,7 +58,7 @@ block body
 	
 			div#rubber.textImageBar
 				table
-					td.image
+					td.image.boxShadow
 						div.horizontalList.twoRows
 							a.imageLink(href="/products/rubber/v-belts")
 								img(src="/images/products/rubber/v-belts.jpg")
@@ -115,7 +100,7 @@ block body
 							
 						p.text MEGADYNE은 벨트 종류만큼이나 다양한 풀리를 공급하고 있습니다.
 	
-					td.image
+					td.image.boxShadow
 						div.horizontalList.twoRows
 							a.imageLink(href="/products/pulley/pulleys")
 								img(src="/images/products/pulley/pulleys.jpg")
@@ -147,7 +132,7 @@ block body
 	
 			div#other.textImageBar
 				table
-					td.image
+					td.image.boxShadow
 						div.horizontalList.twoRows
 							a.imageLink(href="/products/other/conveyor")
 								img(src="/images/products/other/conveyor.jpg")
@@ -190,7 +175,7 @@ block body
 							
 						p.text MEGADYNE은 다양한 종류의 코팅과 고마찰 옵션을 제공하고 있습니다.
 	
-					td.image
+					td.image.boxShadow
 						div.horizontalList.twoRows
 							a.imageLink(href="/products/special/rubber")
 								img(src="/images/products/special/rubber.jpg")
