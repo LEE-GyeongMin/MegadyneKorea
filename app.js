@@ -115,6 +115,13 @@ app.get('/*', function(req, res, next) {
 	next();
 });
 
+app.get('/catalogs/:pdf', function(req, res, next) {
+	if (fs.existsSync('public/catalogs/' + req.params.pdf)) {
+		res.setHeader('Content-Type', 'application/octet-stream');
+	}
+	next();
+});
+
 app.use(express.static(getDirectory('public'), {
 	dotfile: 'deny',
 	index: false,
