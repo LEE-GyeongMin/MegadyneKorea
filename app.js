@@ -83,7 +83,9 @@ morgan.token('filesize', function(req, res) {
 //app.enable('case sensitive routing');
 app.set('view engine', 'jade');
 app.set('views', getDirectory('jades'));
-app.locals.pretty = true;
+
+app.locals.pretty = '\t';
+app.locals.cache = true;
 
 // MIDDLEWARES
 //===================================================
@@ -109,13 +111,14 @@ app.use(stylus.middleware({
 }));
 
 app.get('/*', function(req, res, next) {
-	res.setHeader('Cache-Control', 'max-age=864000');
+	res.setHeader('Cache-Control', 'public, max-age=864000');
 	next();
 });
 
 app.use(express.static(getDirectory('public'), {
 	dotfile: 'deny',
-	index: false
+	index: false,
+	maxAge: 864000000
 }));
 
 // URL - CONTROLLER MAPPING
