@@ -136,14 +136,13 @@ app.use('/catalogs', catalogs);
 
 // REQUESTS WITH NO HANDLER
 app.use(function(req, res, next) {
-	var err = new Error('URL is Not Defined');
+	var err = new Error();
 	err.status = 404;
 	next(err);
 });
 
 // ERROR HANDLER
 app.use(function(err, req, res, next) {
-	console.log(err.message);
 	res.status(err.status || 500);
 	res.render('error');
 });
