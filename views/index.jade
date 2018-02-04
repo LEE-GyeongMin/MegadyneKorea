@@ -18,9 +18,17 @@ block body
 	div.container
 		+banner("/images/header.jpg")
 
-		+article("MEGADYNE")
-			p.text MEGADYNE은 유럽과 북미, 아시아 등지에 생산공장을 보유하고 있는 부품 제조사이자 글로벌 유통업체 입니다. 다양한 산업군에서 요구하는 특수한 제품들을 폭넓게 제공하기 위해 끊임없이 제조와 개발을 하고 있습니다.
+		+article()
+			h2.subtitle (주)티비에스 소개
+			p.text 안녕하십니까?
+			p.text ㈜티비에스는 산업용벨트, 특수벨트, 벨트원단 등을 수입, 가공, 제작, 판매하는 전문 기업입니다. 이탈리아의 세계적인 벨트생산업체 MEGADYNE의 지정업체로 우수한 기술력과 다양한 제품구성으로 모든 종류의 제품이송에 최적의 구동력을 유지하는 고기능산업용 벨트를 생산, 공급합니다.
+			p.text 끊임없는 노력을 바탕으로 최고의 품질과 서비스를 제공하겠습니다.
+			p.text 감사합니다.
+			p.text(style="text-align: right;") (주)티비에스 직원 일동
 
+		+article()
+			h2.subtitle 찾아오는길
+			div#daumRoughmapContainer1517754529879.root_daum_roughmap.root_daum_roughmap_landing(style="margin: 10px 0;")
 		
 		table.labelImageBox.threeRows
 			tr
@@ -31,5 +39,8 @@ block body
 				+LibImage("/images/about.jpg", "/about")
 				+LibImage("/images/products.jpg", "/products")
 				+LibImage("/images/catalogs.jpg", "/catalogs")
+	
+	script.daum_roughmap_loader_script(src="http://dmaps.daum.net/map_js_init/roughmapLoader.js")
+	+script("/daum-map.js")
 
 
